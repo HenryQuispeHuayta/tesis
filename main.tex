@@ -1,0 +1,54 @@
+\documentclass[12pt, a4paper]{book}
+
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+
+% Configuraciones de márgenes
+\usepackage[a4paper, margin=2.5cm]{geometry}
+
+% Configuraciones de encabezado y pie de página
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{\rightmark}
+\fancyfoot[C]{\thepage}
+
+% Configuración del título
+\title{INTÉRPRETE DE PSEUDOCÓDIGO EN ESPAÑOL DESTINADO A LA PROGRAMACIÓN ESTRUCTURADA}
+\author{Henry Quispe Huayta}
+\date{2024}
+
+\begin{document}
+
+% Carátula
+\input{caratula.tex}
+
+% Dedicatoria
+\input{dedicatoria.tex}
+
+% Agradecimientos
+\input{agradecimientos.tex}
+
+% Resumen
+\input{resumen.tex}
+
+% Abstract
+\input{abstract.tex}
+
+% Índice
+\tableofcontents
+\listoffigures
+\listoftables
+
+% Capítulos
+\input{capitulo1.tex}
+\input{capitulo2.tex}
+\input{capitulo3.tex}
+\input{capitulo4.tex}
+\input{capitulo5.tex}
+
+\end{document}
