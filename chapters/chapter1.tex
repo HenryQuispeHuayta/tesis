@@ -1,0 +1,95 @@
+\chapter{MARCO INTRODUCTORIO}
+Los lenguajes programación, en su mayoría, están desarrollados en el idioma inglés, lo cual provoca que muchas personas que no tienen conocimientos de este idioma no se animen a aprender programación. La mayoría de los países de la región tienen un nivel de inglés entre bajo y muy bajo, Bolivia en especial teniendo un puntaje de 48.87, estando en lugar 61 a nivel mundial, lo cual nos da una idea de lo complicado que puede ser aprender programación (El Deber, 2018).
+
+En el presente trabajo se realizó un prototipo de lenguaje de programación interpretado de programación estructurada que ejecute pseudocódigo en español como herramienta de apoyo a todo aquel que desee aprender o enseñar programación y no tengan familiaridad con el idioma inglés, de esta manera se podrá tomar más tiempo en la lógica de programación y así poder transicionar a otro lenguaje de programación más completo de forma más fluida.
+
+En los capítulos de este trabajo veremos teoría de compiladores e intérpretes, que ayudó a entender cómo funciona un lenguaje de programación, las diferencias que existen entre un lenguaje de programación compilado y otro interpretado, la ventaja que nos da implementar un lenguaje de programación interpretado sobre uno compilado y de esta manera poder realizar nuestro lenguaje de programación.
+
+Como parte del marco teórico, también vimos la base de los lenguajes de programación interpretados, las formas de implementarlos, su estructura y cómo diseñar un lenguaje de programación. Estos son conceptos básicos que necesitábamos para empezar a trabajar en nuestro propio intérprete.
+
+Con lo analizado se tuvo más claro el funcionamiento de un lenguaje de programación interpretado y los pasos que realizamos en la presente tesis.
+
+\section{Antecedentes}
+
+En la actualidad existen pocos proyectos funcionales similares, los siguientes son los más relevantes:
+
+\vspace{-1em}
+\begin{itemize}
+  \item \textbf{Proyecto: Latino}\\
+  Latino es el proyecto más popular en español, es un lenguaje de programación procedural con sintaxis en español de código abierto desarrollado en C.\\
+  Como misión tiene, el desarrollo y administración del lenguaje Latino para que escuelas, universidades, maestros, estudiantes y profesionales encuentren en Latino una herramienta para resolver los problemas del día a día. (Guerrero, 2021).\\
+  Latino es un lenguaje de programación de código abierto. Este puede ser utilizado para el desarrollo de páginas web (server-side), conexiones de base de datos, cálculos matemáticos, y system scripting.\\
+  Al ser un proyecto tan grande, Latino no permite editar fácilmente sus palabras clave (keywords) u otros elementos importantes de su sintaxis, lo que puede limitar su flexibilidad y adaptación a necesidades específicas.
+
+  \item \textbf{Proyecto: Entorno de desarrollo para la ejecución y traducción de pseudocódigo}\\
+  Es una tesis presentada en 2013 para optar al título de ingeniero informático. Corresponde a la construcción de un entorno de desarrollo que permita la ejecución de pseudocódigo.\\
+  Como objetivo general tiene, desarrollar un entorno de desarrollo y un intérprete de pseudocódigo que genere y ejecute código en Visual Basic for Applications (VBA), como herramienta de apoyo al diseño, codificación y ejecución de un algoritmo. (Jara Loayza, 2013).\\
+  Está diseñado específicamente para generar código en VBA, lo que lo hace menos flexible y requiere que los usuarios trabajen dentro de ese entorno específico.
+
+  \item \textbf{Proyecto: PseInt}\\
+  PSeInt es una herramienta para asistir a un estudiante en sus primeros pasos en programación. Mediante un simple e intuitivo pseudolenguaje en español (complementado con un editor de diagramas de flujo), le permite centrar su atención en los conceptos fundamentales de la algoritmia computacional, minimizando las dificultades propias de un lenguaje y proporcionando un entorno de trabajo con numerosas ayudas y recursos didácticos. (Novara, 2023).\\
+  Requiere que los usuarios instalen su software y trabajen desde esa plataforma específica, lo que puede limitar su accesibilidad y flexibilidad.
+\end{itemize}
+\vspace{-1em}
+
+Nuestro intérprete de pseudocódigo en español ofrecerá las siguientes ventajas:
+
+\vspace{-1em}
+\begin{itemize}
+  \item Ofrece una herramienta ligera y fácilmente accesible para estudiantes y educadores.
+  \item  Permitirá a los usuarios adaptar la sintaxis y los mensajes del intérprete a sus necesidades específicas, mejorando la accesibilidad y la facilidad de uso.  
+\end{itemize}
+\vspace{-1em}
+
+\section{Planteamiento del problema}
+En la actualidad existen pocas alternativas para introducirse en la programación para personas que les resulta intimidante el idioma inglés, debido a esto muchos abandonan el camino del aprendizaje de la programación.
+
+Al estar la mayoría de los lenguajes de programación en inglés se espera que los que desean aprender logica de programacion ya tengan un previo conocimiento del idioma antes de entrar en este mundo, con esta herramienta se pretende que los que desean aprender logica de programacion se centren más en aprender la lógica y a su vez ayude en trasladar de mejor manera lo visto en pseudocódigo a código real.
+
+¿Cómo optimizar el aprendizaje de la programación estructurada, asegurando una comprensión efectiva y una aplicación práctica de sus conceptos fundamentales, sin requerir un conocimiento del inglés?
+
+\section{Justificación}
+\subsection{Justificación social}
+Con la creciente demanda de habilidades tecnológicas en la sociedad actual, proporcionar a los estudiantes una herramienta que les permita comprender y expresar algoritmos de manera clara, antes de enfrentarse a la complejidad de un lenguaje de programación, fomentará el interés en la programación desde etapas tempranas de su educación. Esto, a su vez, promoverá la alfabetización digital y preparará a los futuros profesionales para abordar desafíos tecnológicos.
+
+\subsection{Justificación tecnológica}
+En un entorno educativo, donde los estudiantes pueden tener diferentes niveles de familiaridad con el inglés, un intérprete de pseudocódigo en español  actuará como un puente tecnológico. Permitirá a los principiantes concentrarse en la lógica y la estructura de sus algoritmos sin verse obstaculizados por la sintaxis rigurosa de un lenguaje de programación específico. Esto facilitará una transición más suave a niveles más avanzados de programación.
+
+\subsection{Justificación científica}
+La investigación sobre la efectividad de un intérprete de pseudocódigo en español como herramienta de aprendizaje puede arrojar luz sobre cómo los estudiantes asimilan conceptos de programación y cómo estas herramientas pueden adaptarse para satisfacer las necesidades educativas en evolución. Esto puede resultar en avances teóricos y prácticos en la enseñanza de la programación, beneficiando no solo a los estudiantes individuales sino también a la comunidad educativa en general.
+
+\section{Hipótesis}
+\begin{itemize}
+  \item H0 (Hipótesis nula): La percepción media de los usuarios sobre la fiabilidad, usabilidad y eficiencia del intérprete es igual o menor a un nivel aceptable ($\leq3$).
+  \item  H1 (Hipótesis alternativa): La percepción media de los usuarios sobre la fiabilidad, usabilidad y eficiencia del intérprete es mayor que un nivel aceptable ($>3$).
+\end{itemize}
+
+\section{Objetivos}
+\subsection{Objetivo general}
+Desarrollar un prototipo de intérprete de pseudocódigo en español para programación estructurada, para facilitar la ejecución de código escrito con palabras reservadas en español, proporcionando una herramienta eficiente y precisa para el aprendizaje y la comprensión de conceptos de programación sin la necesidad de estar familiarizado con el inglés.
+
+\subsection{Objetivos específicos}
+\begin{itemize}
+  \item Desarrollar un analizador léxico que sea capaz de reconocer y clasificar los elementos léxicos del pseudocódigo en español, como palabras clave, operadores, identificadores y constantes.
+  \item Implementar un analizador sintáctico que verifique la estructura gramatical correcta del pseudocódigo y realice un análisis de sintaxis adecuado.
+  \item Elaborar documentación completa y clara del intérprete de pseudocódigo, que sirva como guía detallada para su uso y comprensión.
+  \item Desarrollar una extensión para el editor de código Visual Studio Code (VSCode) que facilite la escritura y ejecución de pseudocódigo en español, proporcionando características como resaltado de sintaxis, sugerencias de autocompletado y ejecución directa desde el editor.
+\end{itemize}
+
+\section{Metodología}
+Actualmente la mejor forma de trabajar en proyectos de software es mediante las metodologías ágiles. Las metodologías ágiles son una estrategia para ir desarrollando en forma de sprints, cada sprint es una etapa, en la que habrá todo un avance con sus respectivas pruebas.
+
+La metodología ágil Kanban centrada en la visualización y limitación del trabajo en curso, ha demostrado ser eficaz en el desarrollo de software. Al utilizar tableros visuales, Kanban ofrece una visión clara del flujo de trabajo, permitiendo la gestión efectiva de tareas desde su inicio hasta su finalización. Con la imposición de límites en el trabajo en progreso, se busca aumentar la eficiencia y la calidad. La gestión activa, clave en Kanban, implica una revisión continua del proceso para la mejora constante.
+
+\section{Alcances y límites}
+\subsection{Alcances}
+\begin{itemize}
+  \item El desarrollo del intérprete se realizó utilizando Python, aprovechando su eficiencia y versatilidad.
+  \item El intérprete se concibe como una herramienta educativa destinada a facilitar el aprendizaje de la programación estructurada.
+\end{itemize}
+
+\subsection{Límites}
+\begin{itemize}
+  \item El intérprete ejecuta solo código relacionado con la Programación Estructurada, excluyendo otros paradigmas.
+  \item La implementación completa de características adicionales se vio afectada por restricciones de tiempo. Se priorizaron las funciones esenciales para garantizar el desarrollo oportuno.
+\end{itemize}
