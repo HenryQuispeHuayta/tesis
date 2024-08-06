@@ -1,9 +1,9 @@
 \chapter{MARCO TEÓRICO}
 \section{Programación estructurada}
 \subsection{Historia y evolución}
-La programación estructurada surgió en la década de 1960 como una respuesta a la creciente complejidad de los programas de computadora. Antes de este enfoque, los programadores solían utilizar técnicas de programación desordenadas y llenas de saltos incontrolados, conocidas como programación espagueti. Edsger Dijkstra, un prominente científico de la computación, fue uno de los pioneros en promover la programación estructurada. En su influyente letter "Go To Statement Considered Harmful" (1968), Dijkstra argumentó que el uso excesivo de la instrucción “GOTO” hacía que el código fuera difícil de seguir y de mantener. Este letter sentó las bases para la adopción de estructuras de control más estrictas y organizadas en los lenguajes de programación. (Dijkstra, 1968).
+La programación estructurada surgió en la década de 1960 como una respuesta a la creciente complejidad de los programas de computadora. Antes de este enfoque, los programadores solían utilizar técnicas de programación desordenadas y llenas de saltos incontrolados, conocidas como programación espagueti. Edsger Dijkstra, un prominente científico de la computación, fue uno de los pioneros en promover la programación estructurada. En su influyente letter "Go To Statement Considered Harmful" (1968), Dijkstra argumentó que el uso excesivo de la instrucción “GOTO” hacía que el código fuera difícil de seguir y de mantener. Este letter sentó las bases para la adopción de estructuras de control más estrictas y organizadas en los lenguajes de programación. \parencite{Dijkstra1968}
 
-Durante los años 70 y 80, la programación estructurada se convirtió en un estándar en la industria del software. Lenguajes como Pascal, desarrollado por Niklaus Wirth (Barron, 1981), y C, creado por Dennis Ritchie (Kernighan \& Ritchie, 1988), incorporaron estructuras de control claras como secuencias, selecciones e iteraciones. Estos lenguajes promovieron la escritura de código más legible y mantenible, facilitando la detección y corrección de errores. La estructura modular de estos lenguajes también permitió la creación de programas más grandes y complejos de manera ordenada. En esta época, el uso de diagramas de flujo también se popularizó como una herramienta para visualizar la lógica de los programas, ayudando a los desarrolladores a planificar y documentar sus códigos de manera efectiva.
+Durante los años 70 y 80, la programación estructurada se convirtió en un estándar en la industria del software. Lenguajes como Pascal, desarrollado por Niklaus Wirth \parencite{Barron1981}, y C, creado por Dennis Ritchie \parencite{Kernighan1988}, incorporaron estructuras de control claras como secuencias, selecciones e iteraciones. Estos lenguajes promovieron la escritura de código más legible y mantenible, facilitando la detección y corrección de errores. La estructura modular de estos lenguajes también permitió la creación de programas más grandes y complejos de manera ordenada. En esta época, el uso de diagramas de flujo también se popularizó como una herramienta para visualizar la lógica de los programas, ayudando a los desarrolladores a planificar y documentar sus códigos de manera efectiva.
 
 \begin{table}[!h]
   \begin{center}
@@ -31,22 +31,23 @@ La programación estructurada no solo mejoró la calidad del software, sino que 
 La programación estructurada marcó un punto de inflexión en la historia del desarrollo de software, estableciendo prácticas y principios que siguen siendo fundamentales en la programación moderna. Su énfasis en la claridad, la modularidad y la mantenibilidad ha dejado un legado duradero.
 
 \subsection{Principios de la programación estructurada}
-La programación estructurada implica escribir programas de computadora de manera clara y organizada, empleando solo tres tipos de estructuras de control: secuencia, selección e iteración. En este enfoque, se excluye deliberadamente y no se permite el uso de instrucciones de transferencia incondicional. Esto significa que se enfatiza en la organización lógica del código, sin necesidad de saltos incondicionales, lo que contribuye a la legibilidad, mantenibilidad y comprensión del programa. (Alvarez, 2022).
+La programación estructurada implica escribir programas de computadora de manera clara y organizada, empleando solo tres tipos de estructuras de control: secuencia, selección e iteración. En este enfoque, se excluye deliberadamente y no se permite el uso de instrucciones de transferencia incondicional. Esto significa que se enfatiza en la organización lógica del código, sin necesidad de saltos incondicionales, lo que contribuye a la legibilidad, mantenibilidad y comprensión del programa. \parencite{Alvarez2022}
 
 \begin{itemize}
   \item \textbf{Secuencia} \\
   En programación estructurada se refiere a la ejecución secuencial de instrucciones en un programa. Esto significa que las líneas de código se ejecutan una tras otra en el orden en que aparecen en el programa. La secuencia es la base fundamental de cualquier algoritmo, ya que determina el flujo de ejecución del programa. Cada instrucción se ejecuta en su secuencia apropiada, y el programa pasa de una instrucción a la siguiente hasta llegar al final del programa. La secuencia proporciona la estructura básica para organizar y coordinar las diversas operaciones que debe realizar un programa.
-  \begin{figure}[h]
+  \begin{figure}[!h]
     \centering
     \includegraphics[width=0.25\textwidth]{images/secuencia.png}
     \caption{Ejemplo de secuencia}
     \centering Fuente: Elaboración propia
     \label{fig:acciones}
   \end{figure}
+  \newline
 
   \item \textbf{Selección} \\
   La estructura de selección, también conocida como toma de decisiones, permite que un programa ejecute diferentes instrucciones dependiendo de si se cumple una determinada condición lógica. Las estructuras de selección más comunes son las declaraciones ``if`` y ``else'', que permiten al programa elegir entre dos o más caminos basados en condiciones específicas. Por ejemplo, un programa puede decidir qué acción tomar según el valor de una variable o el resultado de una operación. La estructura de selección es fundamental para escribir programas que respondan de manera diferente a diferentes situaciones o entradas.
-  \begin{figure}[h]
+  \begin{figure}[!h]
     \centering
     \includegraphics[width=0.4\textwidth]{images/seleccion.png}
     \caption{Ejemplo de selección}
@@ -54,10 +55,11 @@ La programación estructurada implica escribir programas de computadora de maner
     \label{fig:seleccion}
   \end{figure}
   \newline
+  \newline
 
   \item \textbf{Iteración} \\
   La estructura de iteración, también conocida como bucle, permite que un bloque de código se repita varias veces hasta que se cumpla una determinada condición de salida. Esto permite la ejecución repetida de un conjunto de instrucciones sin tener que escribir el mismo código una y otra vez. Los bucles son esenciales para realizar tareas repetitivas de manera eficiente, como procesar grandes cantidades de datos o realizar operaciones en una lista o matriz. Las estructuras de bucle más comunes son "for", "while" y "do-while", cada una con sus propias características y casos de uso específicos. La estructura de iteración es crucial para la automatización de tareas y la optimización del rendimiento en programas informáticos.
-  \begin{figure}[h]
+  \begin{figure}[!h]
     \centering
     \includegraphics[width=0.3\textwidth]{images/iteracion.png}
     \caption{Ejemplo de iteración}
@@ -73,13 +75,13 @@ La programación estructurada es un paradigma de programación que promueve la m
 \subsubsection{Ventajas de la programación estructurada}
 \begin{itemize}
   \item \textbf{Claridad y mantenimiento} \\
-  La programación estructurada mejora significativamente la claridad del código. Al usar estructuras de control como bucles, condicionales y subrutinas, el flujo del programa se vuelve más comprensible y predecible. Esto facilita tanto la escritura como la lectura del código, lo cual es esencial para el mantenimiento a largo plazo y la colaboración entre múltiples desarrolladores. Programas claros y bien documentados son más fáciles de actualizar y depurar (Dijkstra, 1968).
+  La programación estructurada mejora significativamente la claridad del código. Al usar estructuras de control como bucles, condicionales y subrutinas, el flujo del programa se vuelve más comprensible y predecible. Esto facilita tanto la escritura como la lectura del código, lo cual es esencial para el mantenimiento a largo plazo y la colaboración entre múltiples desarrolladores. Programas claros y bien documentados son más fáciles de actualizar y depurar. \parencite{Dijkstra1968}
 
   \item \textbf{Reutilización y modularidad} \\
-  Este enfoque permite la creación de módulos o subrutinas reutilizables. La modularidad facilita la reutilización del código en diferentes partes del programa o incluso en diferentes proyectos. Esto no solo reduce el tiempo de desarrollo, sino que también disminuye la probabilidad de errores, ya que el código reutilizado ha sido previamente probado y validado. (Dijkstra, 1968).
+  Este enfoque permite la creación de módulos o subrutinas reutilizables. La modularidad facilita la reutilización del código en diferentes partes del programa o incluso en diferentes proyectos. Esto no solo reduce el tiempo de desarrollo, sino que también disminuye la probabilidad de errores, ya que el código reutilizado ha sido previamente probado y validado. \parencite{Dijkstra1968}
 
   \item \textbf{Detección y corrección de errores} \\
-  La estructura ordenada y lógica de los programas estructurados facilita la localización de errores. Los programas divididos en módulos independientes permiten identificar y corregir errores de manera más eficiente. Cada módulo puede ser probado individualmente antes de integrarlo en el programa completo, lo que simplifica la identificación de errores y su resolución. (Dijkstra, 1968).
+  La estructura ordenada y lógica de los programas estructurados facilita la localización de errores. Los programas divididos en módulos independientes permiten identificar y corregir errores de manera más eficiente. Cada módulo puede ser probado individualmente antes de integrarlo en el programa completo, lo que simplifica la identificación de errores y su resolución. \parencite{Dijkstra1968}
 \end{itemize}
 
 \begin{table}[!h]
@@ -109,9 +111,9 @@ La programación estructurada, con su enfoque en la claridad, la modularidad y l
   \item \textbf{Rigidez y complejidad en programas grandes} \\
   A medida que los programas se vuelven más grandes y complejos, la programación estructurada puede volverse rígida. Mantener una estructura estrictamente organizada puede ser desafiante, y la adición de nuevas funcionalidades puede requerir modificaciones significativas en múltiples partes del código. Esto puede llevar a una mayor complejidad en el mantenimiento y evolución del software. (Dijkstra, 1968)
   \item \textbf{Rendimiento y flexibilidad limitados} \\
-  La programación estructurada puede no ser la mejor opción para aplicaciones que requieren un rendimiento muy alto o una gran flexibilidad. Algunas optimizaciones de rendimiento, como la programación concurrente o la manipulación de bajo nivel de recursos, pueden ser más difíciles de implementar de manera eficiente dentro del marco estructurado. Esto puede limitar el rendimiento del programa en situaciones críticas. (Dijkstra, 1968).
+  La programación estructurada puede no ser la mejor opción para aplicaciones que requieren un rendimiento muy alto o una gran flexibilidad. Algunas optimizaciones de rendimiento, como la programación concurrente o la manipulación de bajo nivel de recursos, pueden ser más difíciles de implementar de manera eficiente dentro del marco estructurado. Esto puede limitar el rendimiento del programa en situaciones críticas. \parencite{Dijkstra1968}
   \item \textbf{Curva de aprendizaje} \\
-  Aunque la programación estructurada promueve buenas prácticas, puede tener una curva de aprendizaje pronunciada para los principiantes. Comprender y aplicar correctamente las estructuras de control, la modularidad y la separación de funciones puede ser un desafío para los nuevos programadores. Esto requiere una educación y formación adecuada para asegurar que los desarrolladores puedan aprovechar plenamente las ventajas de este paradigma. (Dijkstra, 1968).
+  Aunque la programación estructurada promueve buenas prácticas, puede tener una curva de aprendizaje pronunciada para los principiantes. Comprender y aplicar correctamente las estructuras de control, la modularidad y la separación de funciones puede ser un desafío para los nuevos programadores. Esto requiere una educación y formación adecuada para asegurar que los desarrolladores puedan aprovechar plenamente las ventajas de este paradigma. \parencite{Dijkstra1968}
 \end{itemize}
 
 \section{Compiladores e intérpretes}
@@ -120,17 +122,17 @@ Un compilador, en el contexto de la informática, es una herramienta esencial qu
 
 \begin{itemize}
   \item \textbf{Análisis léxico} \\
-  En la primera fase, el compilador realiza un análisis léxico, escaneando el código fuente para identificar y clasificar elementos léxicos como palabras clave, operadores y variables. Este proceso implica la creación de tokens que representan unidades léxicas básicas, proporcionando la base para etapas posteriores (Cooper \& Torczon, 2012).
+  En la primera fase, el compilador realiza un análisis léxico, escaneando el código fuente para identificar y clasificar elementos léxicos como palabras clave, operadores y variables. Este proceso implica la creación de tokens que representan unidades léxicas básicas, proporcionando la base para etapas posteriores. \parencite{cooper2022}
   \item \textbf{Análisis sintáctico} \\
-  La fase de análisis sintáctico sigue al análisis léxico y se centra en la estructura gramatical del código fuente. Aquí, se verifica que las secuencias de tokens sigan la gramática del lenguaje de programación. El resultado es un árbol sintáctico que representa la estructura jerárquica del programa, facilitando la comprensión y manipulación del código (Anderson, 2010).
+  La fase de análisis sintáctico sigue al análisis léxico y se centra en la estructura gramatical del código fuente. Aquí, se verifica que las secuencias de tokens sigan la gramática del lenguaje de programación. El resultado es un árbol sintáctico que representa la estructura jerárquica del programa, facilitando la comprensión y manipulación del código. \parencite{Anderson2010}
   \item \textbf{Análisis semántico} \\
-  El análisis semántico se encarga de verificar la coherencia y consistencia del código fuente en términos de significado y contexto. Se asegura de que las operaciones y expresiones sean válidas y tengan sentido dentro del lenguaje de programación. Este proceso es fundamental para detectar errores y garantizar la integridad del programa (Anderson, 2010).
+  El análisis semántico se encarga de verificar la coherencia y consistencia del código fuente en términos de significado y contexto. Se asegura de que las operaciones y expresiones sean válidas y tengan sentido dentro del lenguaje de programación. Este proceso es fundamental para detectar errores y garantizar la integridad del programa. \parencite{Anderson2010}
   \item \textbf{Generación de código intermedio} \\
-  Después del análisis sintáctico, se genera un código intermedio que sirve como representación abstracta del programa. Este código intermedio facilita la optimización del programa antes de generar el código objeto final. Durante esta fase, el compilador busca oportunidades para mejorar la eficiencia y la legibilidad del código (Cooper \& Torczon, 2012).
+  Después del análisis sintáctico, se genera un código intermedio que sirve como representación abstracta del programa. Este código intermedio facilita la optimización del programa antes de generar el código objeto final. Durante esta fase, el compilador busca oportunidades para mejorar la eficiencia y la legibilidad del código. \parencite{cooper2022}
   \item \textbf{Optimización de código} \\
-  La optimización de código es una etapa crucial en la que el compilador aplica diversas técnicas para mejorar el rendimiento del programa resultante. Esto incluye la eliminación de código redundante, la reorganización de instrucciones para minimizar el uso de recursos y la aplicación de estrategias para reducir la complejidad del programa (Cooper \& Torczon, 2012).
+  La optimización de código es una etapa crucial en la que el compilador aplica diversas técnicas para mejorar el rendimiento del programa resultante. Esto incluye la eliminación de código redundante, la reorganización de instrucciones para minimizar el uso de recursos y la aplicación de estrategias para reducir la complejidad del programa. \parencite{cooper2022}
   \item \textbf{Generación de código objeto} \\
-  La última fase implica la traducción del código intermedio optimizado a código objeto específico para la plataforma de destino. Este código objeto es un conjunto de instrucciones de bajo nivel comprensibles por la arquitectura del hardware de la computadora. El resultado final es un programa ejecutable que puede ser lanzado en la máquina objetivo (Cooper \& Torczon, 2012).
+  La última fase implica la traducción del código intermedio optimizado a código objeto específico para la plataforma de destino. Este código objeto es un conjunto de instrucciones de bajo nivel comprensibles por la arquitectura del hardware de la computadora. El resultado final es un programa ejecutable que puede ser lanzado en la máquina objetivo. \parencite{cooper2022}
 \end{itemize}
 
 En conjunto, estas funciones convierten al compilador en una pieza esencial del desarrollo de software, permitiendo que los programas escritos en lenguajes de alto nivel se ejecuten eficientemente en los sistemas informáticos.
@@ -140,13 +142,13 @@ A diferencia de un compilador, un intérprete es una herramienta de ejecución d
 
 \begin{itemize}
   \item \textbf{Análisis léxico y sintáctico en tiempo real} \\
-  Un intérprete analiza el código fuente durante la ejecución, realizando el análisis léxico y sintáctico en tiempo real. En lugar de realizar una fase de análisis previa, como en el caso de un compilador, el intérprete interpreta y ejecuta las instrucciones directamente del código fuente, lo que facilita una respuesta inmediata a posibles errores o cambios en el programa (Jeffery, 2021).
+  Un intérprete analiza el código fuente durante la ejecución, realizando el análisis léxico y sintáctico en tiempo real. En lugar de realizar una fase de análisis previa, como en el caso de un compilador, el intérprete interpreta y ejecuta las instrucciones directamente del código fuente, lo que facilita una respuesta inmediata a posibles errores o cambios en el programa. \parencite{Jeffery2021}
   \item \textbf{Interpretación directa} \\
-  El intérprete ejecuta las instrucciones del código fuente sin generar un código intermedio o un archivo ejecutable independiente. Cada vez que se ejecuta el programa, el intérprete interpreta y ejecuta las instrucciones directamente, eliminando la necesidad de una fase de compilación previa (Jeffery, 2021).
+  El intérprete ejecuta las instrucciones del código fuente sin generar un código intermedio o un archivo ejecutable independiente. Cada vez que se ejecuta el programa, el intérprete interpreta y ejecuta las instrucciones directamente, eliminando la necesidad de una fase de compilación previa. \parencite{Jeffery2021}
   \item \textbf{Menor optimización} \\
-  A diferencia de un compilador, un intérprete generalmente realiza menos optimizaciones exhaustivas. La optimización se realiza en tiempo real durante la ejecución, lo que puede resultar en un rendimiento ligeramente inferior en comparación con un programa compilado (Jeffery, 2021).
+  A diferencia de un compilador, un intérprete generalmente realiza menos optimizaciones exhaustivas. La optimización se realiza en tiempo real durante la ejecución, lo que puede resultar en un rendimiento ligeramente inferior en comparación con un programa compilado. \parencite{Jeffery2021}
   \item \textbf{Adaptabilidad} \\
-  La principal ventaja de un intérprete radica en su adaptabilidad. Los cambios en el código fuente pueden reflejarse de inmediato durante la ejecución sin la necesidad de pasar por una fase de compilación. Esto facilita el desarrollo iterativo y la depuración rápida, ya que los programadores pueden ver los resultados casi instantáneamente (Jeffery, 2021).
+  La principal ventaja de un intérprete radica en su adaptabilidad. Los cambios en el código fuente pueden reflejarse de inmediato durante la ejecución sin la necesidad de pasar por una fase de compilación. Esto facilita el desarrollo iterativo y la depuración rápida, ya que los programadores pueden ver los resultados casi instantáneamente. \parencite{Jeffery2021}
 \end{itemize}
 
 En resumen, un intérprete es una herramienta dinámica que analiza y ejecuta el código fuente en tiempo real, ofreciendo adaptabilidad y facilitando el desarrollo ágil. Aunque puede tener un rendimiento ligeramente inferior en comparación con un código compilado, su capacidad para reflejar cambios de manera inmediata lo hace valioso en contextos de desarrollo rápido y pruebas iterativas.
@@ -156,11 +158,11 @@ Las diferencias entre un compilador y un intérprete residen principalmente en s
 
 \begin{itemize}
   \item \textbf{Generación de código} \\
-  Un compilador, en su esencia, lleva a cabo la generación de código como una etapa previa al tiempo de ejecución. Este proceso implica la conversión del código fuente de alto nivel en un formato ejecutable o en un código intermedio que posteriormente se traduce a instrucciones específicas para la máquina objetivo. Por el contrario, un intérprete opera directamente sobre el código fuente en tiempo real, analizando y ejecutando las instrucciones de manera secuencial sin la necesidad de generar un archivo ejecutable independiente (Alfonseca Moreno et al., 2006).
+  Un compilador, en su esencia, lleva a cabo la generación de código como una etapa previa al tiempo de ejecución. Este proceso implica la conversión del código fuente de alto nivel en un formato ejecutable o en un código intermedio que posteriormente se traduce a instrucciones específicas para la máquina objetivo. Por el contrario, un intérprete opera directamente sobre el código fuente en tiempo real, analizando y ejecutando las instrucciones de manera secuencial sin la necesidad de generar un archivo ejecutable independiente. \parencite{AlfonsecaMoreno2006}
   \item \textbf{Eficiencia} \\
-  La eficiencia se erige como una distinción marcada entre compiladores e intérpretes. Los programas compilados, debido a las optimizaciones exhaustivas realizadas durante la fase de compilación, tienden a exhibir un rendimiento superior. El código resultante está meticulosamente adaptado a la arquitectura de la máquina objetivo. Por otro lado, los intérpretes pueden experimentar un rendimiento ligeramente inferior ya que ejecutan directamente el código fuente, incurriendo en el costo de interpretación durante la ejecución (Alfonseca Moreno et al., 2006).
+  La eficiencia se erige como una distinción marcada entre compiladores e intérpretes. Los programas compilados, debido a las optimizaciones exhaustivas realizadas durante la fase de compilación, tienden a exhibir un rendimiento superior. El código resultante está meticulosamente adaptado a la arquitectura de la máquina objetivo. Por otro lado, los intérpretes pueden experimentar un rendimiento ligeramente inferior ya que ejecutan directamente el código fuente, incurriendo en el costo de interpretación durante la ejecución. \parencite{AlfonsecaMoreno2006}
   \item \textbf{Portabilidad} \\
-  En cuanto a la portabilidad, los intérpretes generalmente presentan una ventaja considerable. Dado que el código fuente puede ejecutarse directamente, los programas interpretados son inherentemente más portátiles entre diferentes plataformas. Contrariamente, los compiladores generan código específico para la plataforma de destino, lo que puede limitar la portabilidad del código compilado entre diversas arquitecturas o sistemas operativos. No obstante, con la presencia de compiladores cruzados y máquinas virtuales, esta limitación se ve mitigada en algunos contextos (Alfonseca Moreno et al., 2006).
+  En cuanto a la portabilidad, los intérpretes generalmente presentan una ventaja considerable. Dado que el código fuente puede ejecutarse directamente, los programas interpretados son inherentemente más portátiles entre diferentes plataformas. Contrariamente, los compiladores generan código específico para la plataforma de destino, lo que puede limitar la portabilidad del código compilado entre diversas arquitecturas o sistemas operativos. No obstante, con la presencia de compiladores cruzados y máquinas virtuales, esta limitación se ve mitigada en algunos contextos. \parencite{AlfonsecaMoreno2006}
 \end{itemize}
 
 Estas diferencias fundamentales arrojan luz sobre las consideraciones cruciales que los desarrolladores deben tener en cuenta al elegir entre un compilador y un intérprete según las necesidades y requisitos particulares de un proyecto. Mientras que los compiladores se destacan por ofrecer un rendimiento optimizado, los intérpretes se distinguen por su adaptabilidad y facilidad de uso, especialmente en entornos de desarrollo ágil y pruebas iterativas.
@@ -169,13 +171,13 @@ Estas diferencias fundamentales arrojan luz sobre las consideraciones cruciales 
 Cuando se aborda la construcción de un intérprete, suele ser beneficioso adoptar una Representación Interna (RI) del lenguaje fuente a analizar. En este enfoque, la organización interna del intérprete se divide en módulos distintos:
 
 \subsection{Traductor a representación interna}
-Este módulo toma como entrada el código del programa en el Lenguaje Fuente. Analiza dicho código y lo transforma en la representación interna correspondiente al programa. (Labra Gayo et al., 2003).
+Este módulo toma como entrada el código del programa en el Lenguaje Fuente. Analiza dicho código y lo transforma en la representación interna correspondiente al programa. \parencite{LabraGayo2003}
 
 \subsection{Representación interna (P/RI)}
-La representación interna debe ser coherente con el programa original. Los árboles sintácticos son comúnmente utilizados como representación interna, y en casos donde sea viable, también se pueden emplear estructuras de pila para lograr una mayor eficiencia. (Labra Gayo et al., 2003).
+La representación interna debe ser coherente con el programa original. Los árboles sintácticos son comúnmente utilizados como representación interna, y en casos donde sea viable, también se pueden emplear estructuras de pila para lograr una mayor eficiencia. \parencite{LabraGayo2003}
 
 \subsection{Tabla de símbolos}
-Durante el proceso de traducción, se crea una tabla que almacena información relativa a los símbolos presentes en el código. La información almacenada puede incluir etiquetas para instrucciones de salto, detalles sobre identificadores (nombre, tipo, línea de aparición, etc.) u otra información necesaria en la etapa de evaluación. (Labra Gayo et al., 2003).
+Durante el proceso de traducción, se crea una tabla que almacena información relativa a los símbolos presentes en el código. La información almacenada puede incluir etiquetas para instrucciones de salto, detalles sobre identificadores (nombre, tipo, línea de aparición, etc.) u otra información necesaria en la etapa de evaluación. \parencite{LabraGayo2003}
 
 \begin{table}[!h]
   \begin{center}
@@ -214,26 +216,26 @@ Durante el proceso de traducción, se crea una tabla que almacena información r
     \end{tabularx}
   \end{center}
   \caption{Tabla de símbolos}
-  \centering Fuente: (lu1tr0n, 2016)
+  \centering Fuente: \parencite{lu1tr0n2016}
   \label{tab:simbolos}
 \end{table}
 
 \subsection{Evaluador de representación interna}
-Este módulo utiliza la representación interna generada y los datos de entrada para llevar a cabo las acciones necesarias y obtener los resultados esperados. Durante el proceso de evaluación, se deben contemplar posibles errores que puedan surgir (Labra Gayo et al., 2003).
+Este módulo utiliza la representación interna generada y los datos de entrada para llevar a cabo las acciones necesarias y obtener los resultados esperados. Durante el proceso de evaluación, se deben contemplar posibles errores que puedan surgir. \parencite{LabraGayo2003}
 
 \subsection{Tratamiento de errores}
-Se gestiona el tratamiento de errores que podrían surgir durante el proceso de evaluación, como desbordamiento de la pila o divisiones por cero, entre otros (Labra Gayo et al., 2003).
+Se gestiona el tratamiento de errores que podrían surgir durante el proceso de evaluación, como desbordamiento de la pila o divisiones por cero, entre otros. \parencite{LabraGayo2003}
 
-Dependiendo de la complejidad del código a analizar, el intérprete puede incluir módulos similares a los de un compilador tradicional, como el análisis léxico, sintáctico y semántico. Durante la evaluación, el intérprete interactúa con los recursos del sistema, como la memoria y los discos. En muchos sistemas interpretados, se libera al programador de la gestión explícita de la memoria mediante técnicas de recolección de basura (Labra Gayo et al., 2003).
+Dependiendo de la complejidad del código a analizar, el intérprete puede incluir módulos similares a los de un compilador tradicional, como el análisis léxico, sintáctico y semántico. Durante la evaluación, el intérprete interactúa con los recursos del sistema, como la memoria y los discos. En muchos sistemas interpretados, se libera al programador de la gestión explícita de la memoria mediante técnicas de recolección de basura. \parencite{LabraGayo2003}
 
-En el proceso de evaluar la representación interna, existen dos métodos fundamentales: la interpretación iterativa y la interpretación recursiva. Estos métodos definen cómo se llevarán a cabo las operaciones sobre la representación interna para obtener los resultados finales (Labra Gayo et al., 2003).
+En el proceso de evaluar la representación interna, existen dos métodos fundamentales: la interpretación iterativa y la interpretación recursiva. Estos métodos definen cómo se llevarán a cabo las operaciones sobre la representación interna para obtener los resultados finales. \parencite{LabraGayo2003}
 
 \section{Diseño de lenguajes de programación}
 \subsection{Componentes principales del diseño}
 El diseño de lenguajes de programación implica varios componentes fundamentales que aseguran su funcionalidad y eficiencia. Estos componentes incluyen el análisis léxico, que convierte el código fuente en una secuencia de tokens; el análisis sintáctico, que organiza estos tokens en una estructura jerárquica coherente; y el análisis semántico, que verifica la validez lógica de las estructuras sintácticas. Además, el diseño considera la implementación de un intérprete o compilador para ejecutar el código, la definición de la semántica y sintaxis del lenguaje, y la gestión de memoria y optimización del rendimiento. Estos elementos colaboran para crear un lenguaje de programación eficiente y funcional.
 
 \subsubsection{Tokens y su manejo}
-Los tokens son las unidades léxicas más pequeñas de un lenguaje de programación, y su manejo es una parte crucial del análisis léxico. Un token puede representar una palabra clave, un identificador, un literal (como un número o una cadena), un operador o un delimitador. El proceso de tokenización convierte una cadena de caracteres del código fuente en una secuencia de tokens que pueden ser procesados por el analizador sintáctico. Este proceso es fundamental para la correcta interpretación y compilación del código, ya que permite descomponer el texto en componentes manejables y significativos. (Jeffery, 2021).
+Los tokens son las unidades léxicas más pequeñas de un lenguaje de programación, y su manejo es una parte crucial del análisis léxico. Un token puede representar una palabra clave, un identificador, un literal (como un número o una cadena), un operador o un delimitador. El proceso de tokenización convierte una cadena de caracteres del código fuente en una secuencia de tokens que pueden ser procesados por el analizador sintáctico. Este proceso es fundamental para la correcta interpretación y compilación del código, ya que permite descomponer el texto en componentes manejables y significativos.. \parencite{Jeffery2021}
 
 El manejo de tokens implica definir claramente los diferentes tipos de tokens que el lenguaje soporta y cómo se deben identificar. En el diseño de lenguajes de programación, los tokens se categorizan típicamente en varias clases, como se muestra en la tabla siguiente:
 
@@ -262,7 +264,7 @@ El manejo de tokens implica definir claramente los diferentes tipos de tokens qu
 
 La importancia del manejo adecuado de tokens no puede subestimarse, ya que afecta directamente a la precisión del análisis sintáctico y la ejecución del código. Un sistema de tokenización bien diseñado puede detectar errores léxicos tempranos y proporcionar mensajes de error significativos, mejorando así la experiencia del desarrollador y la confiabilidad del software.
 
-Un sistema de tokenización bien diseñado no solo organiza el código en componentes manejables, sino que también juega un papel crucial en la detección temprana de errores léxicos. Al identificar errores en esta etapa inicial del proceso de compilación, se evita que errores menores escalen a problemas más complejos en fases posteriores, lo que facilita su corrección y mejora la calidad del software. (Jeffery, 2021).
+Un sistema de tokenización bien diseñado no solo organiza el código en componentes manejables, sino que también juega un papel crucial en la detección temprana de errores léxicos. Al identificar errores en esta etapa inicial del proceso de compilación, se evita que errores menores escalen a problemas más complejos en fases posteriores, lo que facilita su corrección y mejora la calidad del software.. \parencite{Jeffery2021}
 
 A continuación, se presenta un diagrama de flujo básico que ilustra el proceso de tokenización:
 \begin{figure}[!h]
@@ -280,11 +282,11 @@ Las estructuras léxicas son las reglas y patrones que definen cómo se reconoce
 
 \begin{itemize}
   \item \textbf{Patrón} \\
-  Un patrón es una regla que describe la secuencia de caracteres que puede formar un determinado token. Por ejemplo, el patrón para un identificador podría ser una letra seguida de cualquier combinación de letras y dígitos. Los patrones se definen utilizando expresiones regulares o gramáticas formales, y son fundamentales para la correcta identificación de los tokens. (Jeffery, 2021).
+  Un patrón es una regla que describe la secuencia de caracteres que puede formar un determinado token. Por ejemplo, el patrón para un identificador podría ser una letra seguida de cualquier combinación de letras y dígitos. Los patrones se definen utilizando expresiones regulares o gramáticas formales, y son fundamentales para la correcta identificación de los tokens.. \parencite{Jeffery2021}
   \item \textbf{Lexema} \\
-  Un lexema es una cadena de caracteres del código fuente que coincide con un patrón específico. Por ejemplo, en la expresión x = 10;, los lexemas incluyen x, =, 10, y ;. Cada lexema se asocia con un token que describe su tipo y, en algunos casos, su valor. (Jeffery, 2021).
+  Un lexema es una cadena de caracteres del código fuente que coincide con un patrón específico. Por ejemplo, en la expresión x = 10;, los lexemas incluyen x, =, 10, y ;. Cada lexema se asocia con un token que describe su tipo y, en algunos casos, su valor.. \parencite{Jeffery2021}
   \item \textbf{Componente léxico} \\
-  Un componente léxico, o token, es el resultado de la agrupación de un lexema según su patrón correspondiente. Un componente léxico puede tener uno o varios lexemas asociados. Por ejemplo, las palabras clave como if y while tienen un único lexema, mientras que los identificadores y números pueden tener infinitos lexemas diferentes. (Jeffery, 2021).
+  Un componente léxico, o token, es el resultado de la agrupación de un lexema según su patrón correspondiente. Un componente léxico puede tener uno o varios lexemas asociados. Por ejemplo, las palabras clave como if y while tienen un único lexema, mientras que los identificadores y números pueden tener infinitos lexemas diferentes.. \parencite{Jeffery2021}
 \end{itemize}
 
 En la siguiente tabla se muestran algunos ejemplos:
@@ -319,17 +321,17 @@ Las estructuras sintácticas definen las reglas que gobiernan cómo se combinan 
 
 \paragraph{Análisis sintáctico}
 
-Un analizador sintáctico constituye una componente esencial en el desarrollo de un sistema de interpretación de código. Su función principal radica en convertir la entrada proporcionada en una estructura jerárquica más significativa, comúnmente representada mediante un árbol de derivación (Ortín Soler et al., 2004).
+Un analizador sintáctico constituye una componente esencial en el desarrollo de un sistema de interpretación de código. Su función principal radica en convertir la entrada proporcionada en una estructura jerárquica más significativa, comúnmente representada mediante un árbol de derivación. \parencite{OrtínSoler2004}
 
 Este proceso sintáctico se encarga de transformar el texto de entrada en otras estructuras, como árboles, que facilitan análisis subsiguientes y capturan la jerarquía subyacente en la entrada. Un analizador léxico previo se encarga de generar tokens a partir de la secuencia de caracteres de entrada. Estos tokens, a su vez, son procesados por el analizador sintáctico para construir la estructura de datos deseada, como por ejemplo un árbol de análisis o árboles de sintaxis abstracta.
 
-No solo limitado al ámbito de compiladores, el análisis sintáctico encuentra aplicación en la etapa inicial del procesamiento de frases en lenguaje natural. En este contexto, se utiliza para generar diagramas en idiomas que hacen uso de la flexión gramatical, como los idiomas romances o el latín. Los analizadores sintácticos son especialmente eficaces en la interpretación de lenguajes que cumplen con la condición de ser libres de contexto (Ortín Soler et al., 2004).
+No solo limitado al ámbito de compiladores, el análisis sintáctico encuentra aplicación en la etapa inicial del procesamiento de frases en lenguaje natural. En este contexto, se utiliza para generar diagramas en idiomas que hacen uso de la flexión gramatical, como los idiomas romances o el latín. Los analizadores sintácticos son especialmente eficaces en la interpretación de lenguajes que cumplen con la condición de ser libres de contexto. \parencite{OrtínSoler2004}
 
-Es relevante destacar que existe una fundamentación formal que establece que los lenguajes libres de contexto son aquellos que pueden ser reconocidos por un autómata de pila. De esta manera, todo analizador sintáctico capaz de reconocer un lenguaje libre de contexto es equivalente en capacidad computacional a un autómata de pila. Este hecho proporciona un marco teórico sólido para comprender la potencia y alcance de los analizadores sintácticos en el ámbito de la interpretación de lenguajes. (Ortín Soler et al., 2004).
+Es relevante destacar que existe una fundamentación formal que establece que los lenguajes libres de contexto son aquellos que pueden ser reconocidos por un autómata de pila. De esta manera, todo analizador sintáctico capaz de reconocer un lenguaje libre de contexto es equivalente en capacidad computacional a un autómata de pila. Este hecho proporciona un marco teórico sólido para comprender la potencia y alcance de los analizadores sintácticos en el ámbito de la interpretación de lenguajes. \parencite{OrtínSoler2004}
 
 \paragraph{Gramática formal}
 
-Es un conjunto de reglas que definen la sintaxis de un lenguaje de programación. Estas reglas especifican cómo se pueden combinar los elementos básicos del lenguaje, conocidos como tokens, para formar estructuras sintácticas válidas, como expresiones, declaraciones y programas completos. Las gramáticas formales son esenciales en el diseño de lenguajes de programación y en la construcción de analizadores sintácticos. (Ortín Soler et al., 2004).
+Es un conjunto de reglas que definen la sintaxis de un lenguaje de programación. Estas reglas especifican cómo se pueden combinar los elementos básicos del lenguaje, conocidos como tokens, para formar estructuras sintácticas válidas, como expresiones, declaraciones y programas completos. Las gramáticas formales son esenciales en el diseño de lenguajes de programación y en la construcción de analizadores sintácticos. \parencite{OrtínSoler2004}
 
 \subparagraph{Componentes de una gramática formal}
 
@@ -346,7 +348,7 @@ Una gramática formal se compone de cuatro componentes principales:
 
 \paragraph{Árbol de análisis sintáctico (AST)}
 
-El árbol de análisis sintáctico, conocido como AST (Abstract Syntax Tree), es una representación jerárquica de la estructura sintáctica de un programa. A diferencia de un árbol de derivación, el AST omite detalles de la gramática que no son esenciales para la semántica del programa y se enfoca en capturar las relaciones estructurales y lógicas entre las diferentes partes del código. (Jeffery, 2021).
+El árbol de análisis sintáctico, conocido como AST (Abstract Syntax Tree), es una representación jerárquica de la estructura sintáctica de un programa. A diferencia de un árbol de derivación, el AST omite detalles de la gramática que no son esenciales para la semántica del programa y se enfoca en capturar las relaciones estructurales y lógicas entre las diferentes partes del código.. \parencite{Jeffery2021}
 
 \subparagraph{Características del AST}
 
@@ -362,7 +364,7 @@ El árbol de análisis sintáctico, conocido como AST (Abstract Syntax Tree), es
 \subparagraph{Construcción del AST}
 La construcción del Árbol de Análisis Sintáctico (AST) se lleva a cabo durante la fase de análisis sintáctico del proceso de compilación o interpretación. Este proceso comienza después de que el analizador léxico ha convertido el código fuente en una secuencia de tokens. El analizador sintáctico utiliza una gramática formal para analizar esta secuencia de tokens y generar el AST. Durante este análisis, el parser (analizador sintáctico) sigue las reglas de la gramática para identificar construcciones sintácticas válidas y crear nodos correspondientes en el árbol. Cada regla de producción de la gramática se traduce en una estructura jerárquica en el AST, donde los nodos representan las construcciones sintácticas y sus relaciones lógicas.
 
-El proceso de construcción del AST implica varios pasos. Primero, el analizador sintáctico lee los tokens y aplica las reglas de producción de la gramática para agruparlos en estructuras mayores. Por ejemplo, una regla de producción podría especificar que una expresión aritmética se compone de un término seguido de un operador y otro término. A medida que el parser reconoce esta estructura, crea un nodo para el operador y agrega nodos hijos para los términos. Este proceso continúa recursivamente, con el parser construyendo subárboles para subexpresiones y combinándolos en estructuras más grandes hasta que todo el código fuente se ha procesado y se ha construido un AST completo. Esta estructura jerárquica es esencial para las etapas posteriores de compilación, como el análisis semántico y la generación de código, ya que proporciona una representación clara y manipulable de la lógica del programa. (Jeffery, 2021).
+El proceso de construcción del AST implica varios pasos. Primero, el analizador sintáctico lee los tokens y aplica las reglas de producción de la gramática para agruparlos en estructuras mayores. Por ejemplo, una regla de producción podría especificar que una expresión aritmética se compone de un término seguido de un operador y otro término. A medida que el parser reconoce esta estructura, crea un nodo para el operador y agrega nodos hijos para los términos. Este proceso continúa recursivamente, con el parser construyendo subárboles para subexpresiones y combinándolos en estructuras más grandes hasta que todo el código fuente se ha procesado y se ha construido un AST completo. Esta estructura jerárquica es esencial para las etapas posteriores de compilación, como el análisis semántico y la generación de código, ya que proporciona una representación clara y manipulable de la lógica del programa.. \parencite{Jeffery2021}
 
 El uso del AST ofrece varias ventajas en el procesamiento del código fuente:
 
@@ -387,7 +389,6 @@ El uso del AST ofrece varias ventajas en el procesamiento del código fuente:
 
 \paragraph{Ejemplo de una gramática formal}
 Consideremos un pequeño subconjunto de un lenguaje de programación que incluye expresiones aritméticas y asignaciones. A continuación, se muestra una posible gramática formal para este subconjunto:
-
 \begin{itemize}
   \item \textbf{Símbolos terminales (T)} \\
   $id$ (identificador), $num$ (número), $+$ (suma), $-$ (resta), $*$ (multiplicación), $/$ (división), $=$ (asignación), $(, )$ (paréntesis).
@@ -403,7 +404,7 @@ Consideremos un pequeño subconjunto de un lenguaje de programación que incluye
   <factor> $\rightarrow$ $id$ \space $|$ $num$ \space $|$ '(' <expresión> ')'
 \end{itemize}
 
-Utilizando la gramática anterior, podemos derivar la sentencia $x = 3 + 5 * (2 + 1)$ de la siguiente manera:
+Utilizando la gramática anterior, podemos derivar la sentencia $x = 3 + 5 * (2 + 1)$.
 \begin{equation*}
   \begin{split}
     <pr&ograma> \\
@@ -439,7 +440,7 @@ Este diagrama ilustra cómo una expresión aritmética se descompone en sus comp
 \subsubsection{Análisis semántico}
 Es una fase crítica en la implementación de un intérprete, enfocada en verificar la lógica del código fuente después de que este ha pasado por el análisis sintáctico. Durante esta etapa, se comprueba que las construcciones del programa tengan sentido dentro del contexto del lenguaje de programación. El análisis semántico se encarga de validar aspectos como la compatibilidad de tipos, la existencia y el alcance de variables, y la correcta invocación de funciones y procedimientos. Por ejemplo, si una variable es utilizada antes de ser declarada o si se intenta asignar un valor de tipo entero a una variable de tipo cadena, estos errores deben ser detectados en esta fase.
 
-El proceso de análisis semántico involucra varias comprobaciones detalladas. Primero, la “verificación de tipos” asegura que las operaciones entre variables y constantes sean compatibles, lo cual evita errores como sumar un número con una cadena de texto. Segundo, el “chequeo de alcances y contextos” confirma que las variables y funciones sean accesibles en los lugares correctos del programa. Esto es particularmente importante en lenguajes que soportan estructuras de alcance anidado o variables locales y globales. Finalmente, la “validación de la correcta invocación de funciones” verifica que las funciones y procedimientos sean llamados con los argumentos correctos en términos de número y tipo. (Jeffery, 2021).
+El proceso de análisis semántico involucra varias comprobaciones detalladas. Primero, la “verificación de tipos” asegura que las operaciones entre variables y constantes sean compatibles, lo cual evita errores como sumar un número con una cadena de texto. Segundo, el “chequeo de alcances y contextos” confirma que las variables y funciones sean accesibles en los lugares correctos del programa. Esto es particularmente importante en lenguajes que soportan estructuras de alcance anidado o variables locales y globales. Finalmente, la “validación de la correcta invocación de funciones” verifica que las funciones y procedimientos sean llamados con los argumentos correctos en términos de número y tipo.. \parencite{Jeffery2021}
 
 A continuación, se presenta una tabla que resume algunos de los errores semánticos comunes y cómo son gestionados en el análisis semántico:
 \begin{table}[!h]
@@ -467,7 +468,7 @@ A continuación, se presenta una tabla que resume algunos de los errores semánt
 \subsubsection{Generación de código intermedio}
 Es una fase que sigue al análisis semántico y precede a la ejecución del código. En esta etapa, el código fuente se transforma en una representación abstracta que no está directamente en lenguaje máquina, pero que es más fácil de manipular y optimizar. Este código intermedio sirve como un puente entre el código de alto nivel y la ejecución final, permitiendo optimizaciones y análisis adicionales que mejoran la eficiencia y la portabilidad del intérprete.
 
-El código intermedio suele estar representado en una forma que conserva la estructura lógica del programa pero con una sintaxis simplificada y estandarizada. Algunas de las formas comunes de código intermedio incluyen el “código de tres direcciones y el lenguaje intermedio basado en registros”. Estas representaciones permiten la implementación de optimizaciones como la eliminación de código muerto, la fusión de bloques básicos, y la reducción de redundancias, mejorando así la eficiencia del intérprete. (Jeffery, 2021).
+El código intermedio suele estar representado en una forma que conserva la estructura lógica del programa pero con una sintaxis simplificada y estandarizada. Algunas de las formas comunes de código intermedio incluyen el “código de tres direcciones y el lenguaje intermedio basado en registros”. Estas representaciones permiten la implementación de optimizaciones como la eliminación de código muerto, la fusión de bloques básicos, y la reducción de redundancias, mejorando así la eficiencia del intérprete.. \parencite{Jeffery2021}
 
 Un ejemplo sencillo de código intermedio puede ser la conversión de una expresión aritmética compleja en una serie de instrucciones más simples y directas. Consideremos la expresión a = b + c * d;. En código intermedio, esto podría representarse como:
 \begin{equation*}
@@ -483,7 +484,7 @@ Estas instrucciones descomponen la expresión en pasos elementales, facilitando 
 \subsubsection{Evaluación y ejecución}
 Es la etapa final en el proceso de implementación de un intérprete. En esta fase, el intérprete toma las instrucciones del código intermedio y las ejecuta una a una, llevando a cabo las operaciones definidas en el programa fuente. Durante esta etapa, se realizan varias tareas críticas, como la gestión de memoria para almacenar y recuperar datos, la manipulación de variables para asegurar que los valores se actualicen correctamente, y la llamada y retorno de funciones para controlar el flujo del programa. Además, se gestiona la entrada y salida de datos, permitiendo al programa interactuar con el usuario. Esta fase es esencial para la ejecución efectiva del código.
 
-Durante la ejecución, es fundamental que el intérprete maneje adecuadamente los errores en tiempo de ejecución, como divisiones por cero, accesos a memoria no válidos, y otros errores lógicos que pueden surgir. La capacidad de detectar y manejar estos errores de manera eficaz es crucial para proporcionar retroalimentación útil al desarrollador y garantizar la robustez del intérprete. Además, el intérprete debe ser capaz de optimizar la ejecución en tiempo real, aplicando técnicas como la ejecución especulativa y la reordenación de instrucciones para mejorar el rendimiento sin comprometer la correcta ejecución del programa. (Jeffery, 2021).
+Durante la ejecución, es fundamental que el intérprete maneje adecuadamente los errores en tiempo de ejecución, como divisiones por cero, accesos a memoria no válidos, y otros errores lógicos que pueden surgir. La capacidad de detectar y manejar estos errores de manera eficaz es crucial para proporcionar retroalimentación útil al desarrollador y garantizar la robustez del intérprete. Además, el intérprete debe ser capaz de optimizar la ejecución en tiempo real, aplicando técnicas como la ejecución especulativa y la reordenación de instrucciones para mejorar el rendimiento sin comprometer la correcta ejecución del programa.. \parencite{Jeffery2021}
 
 El siguiente diagrama ilustra el flujo del proceso de implementación del intérprete, desde el análisis léxico hasta la evaluación y ejecución:
 \begin{figure}[!h]
@@ -497,7 +498,7 @@ El siguiente diagrama ilustra el flujo del proceso de implementación del intér
 Este enfoque estructurado asegura que cada fase del proceso de implementación esté bien definida y coordinada, garantizando la correcta ejecución del programa y la facilidad de mantenimiento y extensión del intérprete.
 
 \section{Python}
-Python es un lenguaje de programación de alto nivel que se utiliza para desarrollar aplicaciones de todo tipo. A diferencia de otros lenguajes como Java o .NET, se trata de un lenguaje interpretado, es decir, que no es necesario compilarlo para ejecutar las aplicaciones escritas en Python, sino que se ejecutan directamente por el ordenador utilizando un programa denominado interpretador, por lo que no es necesario “traducirlo” a lenguaje máquina (Santander Universidades, 2021).
+Python es un lenguaje de programación de alto nivel que se utiliza para desarrollar aplicaciones de todo tipo. A diferencia de otros lenguajes como Java o .NET, se trata de un lenguaje interpretado, es decir, que no es necesario compilarlo para ejecutar las aplicaciones escritas en Python, sino que se ejecutan directamente por el ordenador utilizando un programa denominado interpretador, por lo que no es necesario “traducirlo” a lenguaje máquina. \parencite{SantanderUniversidades2021}
 
 La elección de Python como lenguaje de programación para el desarrollo de nuestro intérprete ofrece una serie de ventajas notables. En primer lugar, Python es reconocido por su facilidad de uso y su sintaxis legible, lo que simplifica el proceso de desarrollo y facilita la comprensión del código fuente. La naturaleza intuitiva de Python es especialmente beneficiosa para un proyecto como un intérprete, donde la claridad y la accesibilidad son fundamentales.
 
@@ -511,16 +512,17 @@ Además, Python es conocido por su capacidad para abordar problemas de programac
 Se adoptó la metodología Kanban como marco de trabajo. Kanban es una metodología ágil que se basa en la visualización del flujo de trabajo y la gestión de tareas de manera incremental. A diferencia de otros enfoques ágiles, Kanban no utiliza sprints fijos y permite una mayor flexibilidad en la gestión de tareas.
 
 \subsection{Kanban}
-La metodología Kanban nos ayudará a definir, gestionar y mejorar los servicios que entregan conocimiento, tales como servicios profesionales, trabajos o actividades en las que interviene la creatividad y el diseño tanto como productos de software como físicos. Su principio de la metodología es “Empieza por donde estés”, por lo cual nos permite realizar cambios de manera eficiente y enfocado en lo requerido por la organización, de igual manera ayuda a reducir la resistencia de evitar los cambios. (Garzas, 2011).
+La metodología Kanban nos ayudará a definir, gestionar y mejorar los servicios que entregan conocimiento, tales como servicios profesionales, trabajos o actividades en las que interviene la creatividad y el diseño tanto como productos de software como físicos. Su principio de la metodología es “Empieza por donde estés”, por lo cual nos permite realizar cambios de manera eficiente y enfocado en lo requerido por la organización, de igual manera ayuda a reducir la resistencia de evitar los cambios. \parencite{Garzas2011}
 
 \begin{itemize}
   \item \textbf{Visualización del flujo de trabajo} \\
-  La visualización del flujo de trabajo es un principio central en Kanban. Al adoptar esta práctica, se logra una representación clara y transparente de todas las tareas en el proceso de desarrollo, desde su concepción hasta su implementación final. La implementación de un tablero Kanban permite a todos los miembros del equipo, en este caso, al desarrollador individual, tener una visión instantánea de las tareas en curso y su estado actual. Cada tarea se representa como una tarjeta en el tablero, proporcionando información detallada sobre su progreso. La visualización facilita la identificación de posibles cuellos de botella, áreas de mejora y ayuda en la toma de decisiones informadas sobre la gestión de las tareas (Anderson, 2010).
+  La visualización del flujo de trabajo es un principio central en Kanban. Al adoptar esta práctica, se logra una representación clara y transparente de todas las tareas en el proceso de desarrollo, desde su concepción hasta su implementación final. La implementación de un tablero Kanban permite a todos los miembros del equipo, en este caso, al desarrollador individual, tener una visión instantánea de las tareas en curso y su estado actual. Cada tarea se representa como una tarjeta en el tablero, proporcionando información detallada sobre su progreso. La visualización facilita la identificación de posibles cuellos de botella, áreas de mejora y ayuda en la toma de decisiones informadas sobre la gestión de las tareas. \parencite{Anderson2010}
+
   \begin{figure}[!h]
     \centering
     \includegraphics[width=0.55\textwidth]{images/kanban.png}
     \caption{Panel Kanban}
-    \centering Fuente: (Bermejo, 2010)
+    \centering Fuente: \parencite{Bermejo2010}
     \label{fig:kanban}
   \end{figure}
   Se representa un panel compuesto por tres columnas que reflejan las diversas fases a través de las cuales una tarea debe fluir para su desarrollo: análisis, desarrollo y puesta en marcha. Cada fase se subdivide en dos estados, ``en curso'' y ``lista'', indicando si el equipo está actualmente trabajando en la tarea en esa fase o si la tarea ha sido completada y está lista para pasar a la siguiente fase. Esta división se destaca mediante una línea discontinua en cada fase, y sirve para identificar posibles atascos en el proceso de producción.
@@ -529,17 +531,17 @@ La metodología Kanban nos ayudará a definir, gestionar y mejorar los servicios
   
   La fase de puesta en marcha se divide en dos, con la fase de ``revisión de calidad''. En esta fase, cada tarea desarrollada es sometida a pruebas de calidad, que son realizadas por uno de los programadores utilizando criterios aprendidos del experto de sistemas.
   
-  Se destaca que el límite de trabajo en progreso (WIP) para la fase de desarrollo se ha reducido de nueve a cinco. La reducción del límite de WIP se basa en las necesidades del proyecto y ayuda a evitar la acumulación excesiva de trabajo en una fase particular. Se menciona que aumentar el límite de WIP es una mala práctica. En la fase de revisión de calidad, todas las tareas deben ser finalizadas pasando por este proceso (Bermejo, 2010).
+  Se destaca que el límite de trabajo en progreso (WIP) para la fase de desarrollo se ha reducido de nueve a cinco. La reducción del límite de WIP se basa en las necesidades del proyecto y ayuda a evitar la acumulación excesiva de trabajo en una fase particular. Se menciona que aumentar el límite de WIP es una mala práctica. En la fase de revisión de calidad, todas las tareas deben ser finalizadas pasando por este proceso. \parencite{Bermejo2010}
 
   \item \textbf{Limitación del trabajo en progreso} \\
-  La imposición de límites al trabajo en progreso es esencial para mantener un flujo de trabajo constante y prevenir la sobrecarga del equipo de desarrollo. Establecer un límite en la cantidad de tareas permitidas en la columna "en curso" ayuda a evitar la multitarea excesiva y concentra la atención en completar tareas antes de comenzar nuevas. Esta limitación fomenta un enfoque más eficiente y eficaz en la resolución de problemas, ya que el desarrollador se centra en unas pocas tareas a la vez. Además, al limitar el trabajo en progreso, se reduce la probabilidad de que se generen cuellos de botella, lo que contribuye a un flujo de trabajo más suave y predecible (Anderson, 2010).
+  La imposición de límites al trabajo en progreso es esencial para mantener un flujo de trabajo constante y prevenir la sobrecarga del equipo de desarrollo. Establecer un límite en la cantidad de tareas permitidas en la columna "en curso" ayuda a evitar la multitarea excesiva y concentra la atención en completar tareas antes de comenzar nuevas. Esta limitación fomenta un enfoque más eficiente y eficaz en la resolución de problemas, ya que el desarrollador se centra en unas pocas tareas a la vez. Además, al limitar el trabajo en progreso, se reduce la probabilidad de que se generen cuellos de botella, lo que contribuye a un flujo de trabajo más suave y predecible. \parencite{Anderson2010}
 
   \item \textbf{Gestión activa} \\
-  La gestión activa en Kanban implica la revisión constante del tablero Kanban para identificar áreas de mejora y optimización del proceso de desarrollo. Esta práctica va más allá de la simple visualización y establecimiento de límites; implica una participación continua para evaluar y ajustar el flujo de trabajo. Mediante la gestión activa, se pueden realizar cambios en tiempo real para abordar problemas emergentes y mejorar la eficiencia del equipo de desarrollo. Esta mentalidad de mejora continua es fundamental para la evolución exitosa del proceso de desarrollo a lo largo del tiempo (Anderson, 2010).
+  La gestión activa en Kanban implica la revisión constante del tablero Kanban para identificar áreas de mejora y optimización del proceso de desarrollo. Esta práctica va más allá de la simple visualización y establecimiento de límites; implica una participación continua para evaluar y ajustar el flujo de trabajo. Mediante la gestión activa, se pueden realizar cambios en tiempo real para abordar problemas emergentes y mejorar la eficiencia del equipo de desarrollo. Esta mentalidad de mejora continua es fundamental para la evolución exitosa del proceso de desarrollo a lo largo del tiempo. \parencite{Anderson2010}
 \end{itemize}
 
 \section{Licencia de uso}
-La Licencia Pública General de GNU versión 3 (GPLv3) es una licencia de software libre desarrollada por la Free Software Foundation (FSF), diseñada para garantizar la libertad de los usuarios de software. Esta licencia establece una serie de permisos, limitaciones y condiciones que rigen el uso, modificación y distribución del software cubierto por ella. (GNU, 2021).
+La Licencia Pública General de GNU versión 3 (GPLv3) es una licencia de software libre desarrollada por la Free Software Foundation (FSF), diseñada para garantizar la libertad de los usuarios de software. Esta licencia establece una serie de permisos, limitaciones y condiciones que rigen el uso, modificación y distribución del software cubierto por ella. \parencite{GNU2021}
 
 \subsection{Permisos}
 \begin{itemize}
@@ -577,19 +579,21 @@ En resumen, la GPLv3 establece un marco legal que fomenta la libertad y la colab
 
 \section{Extensiones de VSCode}
 \subsection{Visual Studio Code (VSCode)}
-Visual Studio Code (VSCode), desarrollado por Microsoft, es un editor de código abierto y gratuito que ha ganado una gran popularidad en la comunidad de desarrollo de software. Destacado por su eficiencia y versatilidad, VSCode es compatible con múltiples sistemas operativos, incluyendo Windows, macOS y Linux. Su atractiva combinación de características, que incluyen soporte para múltiples lenguajes de programación, integración con Git y una amplia gama de extensiones, lo convierten en una herramienta imprescindible para desarrolladores de todos los niveles de experiencia. (García de Zúñiga, 2023).
+Visual Studio Code (VSCode), desarrollado por Microsoft, es un editor de código abierto y gratuito que ha ganado una gran popularidad en la comunidad de desarrollo de software. Destacado por su eficiencia y versatilidad, VSCode es compatible con múltiples sistemas operativos, incluyendo Windows, macOS y Linux. Su atractiva combinación de características, que incluyen soporte para múltiples lenguajes de programación, integración con Git y una amplia gama de extensiones, lo convierten en una herramienta imprescindible para desarrolladores de todos los niveles de experiencia. \parencite{GarcíaDeZúñiga2023}
 
 En resumen, VSCode ofrece una experiencia de desarrollo ágil y potente, respaldada por una comunidad activa y una extensa biblioteca de extensiones, lo que lo convierte en una opción preferida para proyectos de software de cualquier tamaño.
 
 \subsection{Funcionalidades y beneficios de las extensiones de VSCode}
 Las extensiones de Visual Studio Code (VSCode) son complementos diseñados para mejorar y personalizar la experiencia del usuario dentro del editor. Estas extensiones pueden proporcionar desde funciones básicas como resaltado de sintaxis hasta características más avanzadas como herramientas de depuración específicas para ciertos lenguajes de programación. La versatilidad de las extensiones permite a los usuarios adaptar VSCode a sus necesidades específicas, lo que lo convierte en una herramienta altamente personalizable para una amplia gama de proyectos de desarrollo de software.
 
-Una de las ventajas clave de las extensiones de VSCode es su capacidad para extender el soporte del editor a una amplia variedad de lenguajes de programación y tecnologías. Esto significa que los desarrolladores pueden trabajar en proyectos que utilicen diferentes tecnologías sin necesidad de cambiar de editor. Además, la comunidad activa de desarrolladores contribuye constantemente con nuevas extensiones y actualizaciones, lo que garantiza que VSCode siga siendo relevante y competitivo en el mundo del desarrollo de software (Nandwana, 2023).
+Una de las ventajas clave de las extensiones de VSCode es su capacidad para extender el soporte del editor a una amplia variedad de lenguajes de programación y tecnologías. Esto significa que los desarrolladores pueden trabajar en proyectos que utilicen diferentes tecnologías sin necesidad de cambiar de editor. Además, la comunidad activa de desarrolladores contribuye constantemente con nuevas extensiones y actualizaciones, lo que garantiza que VSCode siga siendo relevante y competitivo en el mundo del desarrollo de software. \parencite{Nandwana2023}
 
 En resumen, las extensiones de Visual Studio Code amplían las funcionalidades del editor y permiten a los usuarios adaptarlo a sus necesidades específicas. Desde mejorar el soporte para diferentes lenguajes hasta agregar nuevas características y herramientas, las extensiones juegan un papel fundamental en la versatilidad y la popularidad de VSCode entre los desarrolladores.
 
 \section{Norma ISO 25010}
-La norma ISO 25010, define un conjunto de requisitos y criterios de evaluación que permiten medir la calidad de un producto de software. (Ormeño, 2019). Estos requisitos se dividen en ocho atributos de calidad principales, que son:
+La norma ISO 25010, define un conjunto de requisitos y criterios de evaluación que permiten medir la calidad de un producto de software. \parencite{Ormeño2019}
+
+Estos requisitos se dividen en ocho atributos de calidad principales, que son:
 \begin{itemize}
   \item \textbf{Funcionalidad} \\
   Capacidad de satisfacer las necesidades del usuario.
