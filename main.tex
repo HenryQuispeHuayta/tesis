@@ -1,54 +1,92 @@
-\documentclass[12pt, a4paper]{book}
+\documentclass[12pt, oneside]{book}
 
-% Paquetes necesarios
 \usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
+\usepackage[spanish, es-tabla]{babel}
 \usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{adjustbox}
+\usepackage{amsmath}
 \usepackage[hidelinks]{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage[papersize={21.59cm,27.94cm},top=4cm,bottom=2.5cm,left=4cm,right=2.5cm]{geometry}
+\usepackage[absolute,overlay]{textpos}
+\usepackage[backend=biber, style=apa, sortcites]{biblatex}
+\usepackage{array}
+\usepackage{tocloft}
 
-% Configuraciones de márgenes
-\usepackage[a4paper, margin=2.5cm]{geometry}
+\usepackage{titlesec}
+\titleformat{\chapter}[display]{\fontsize{14pt}{0pt}\selectfont\bfseries}{\chaptername\ \thechapter}{1em}{}
+\titleformat{\section}{\fontsize{12pt}{0pt}\selectfont\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\fontsize{12pt}{0pt}\selectfont\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\fontsize{12pt}{0pt}\selectfont\bfseries}{\thesubsubsection}{1em}{}
+\titleformat{\paragraph}{\fontsize{12pt}{0pt}\selectfont\bfseries}{\theparagraph}{1em}{}
+\titleformat{\subparagraph}{\bfseries\fontsize{12pt}{14pt}\selectfont}{\hspace{-1.5em}\thesubparagraph}{1em}{}[]
 
-% Configuraciones de encabezado y pie de página
+% \titlespacing{\section}{0pt}{1em}{1em}
+% \titlespacing{\subsection}{0pt}{2em}{2em}
+
 \usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead[L]{\leftmark}
-\fancyhead[R]{\rightmark}
-\fancyfoot[C]{\thepage}
+% \fancyhf{}
+% \pagestyle{fancy}
+% \rfoot{\thepage}
 
-% Configuración del título
+
+\usepackage{setspace}
+\setstretch{2.0}
+
+\setlength{\parindent}{1.5em}
+\setlength{\parskip}{0pt}
+
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+
+\cftsetindents{section}{0em}{2em}
+\cftsetindents{subsection}{0em}{2.5em}
+\cftsetindents{subsubsection}{0em}{3em}
+\cftsetindents{paragraph}{0em}{4em}
+\cftsetindents{subparagraph}{0em}{5em}
+
+% \renewcommand\cfttoctitlefont{\hfill\Large\bfseries}
+% \renewcommand\cftaftertoctitle{\hfill\mbox{}}
+
 \title{INTÉRPRETE DE PSEUDOCÓDIGO EN ESPAÑOL DESTINADO A LA PROGRAMACIÓN ESTRUCTURADA}
 \author{Henry Quispe Huayta}
 \date{2024}
 
+\addbibresource{back/references.bib}
 \begin{document}
 
-% Carátula
-\input{caratula.tex}
-
-% Dedicatoria
-\input{dedicatoria.tex}
-
-% Agradecimientos
-\input{agradecimientos.tex}
-
-% Resumen
-\input{resumen.tex}
-
-% Abstract
-\input{abstract.tex}
-
-% Índice
+\frontmatter
+\newgeometry{left=3cm, top=2.54cm, bottom=2.54cm, right=2.54cm}
+\input{front/caratula.tex}
+\newpage
+\include{front/calificaciones}
+\newpage
+\input{front/dedicatoria.tex}
+\newpage
+\input{front/agradecimientos.tex}
+\newpage
+\input{front/resumen.tex}
+\newpage
+\input{front/abstract.tex}
+\newpage
 \tableofcontents
+\newpage
 \listoffigures
+\newpage
 \listoftables
 
-% Capítulos
-\input{capitulo1.tex}
-\input{capitulo2.tex}
-\input{capitulo3.tex}
-\input{capitulo4.tex}
-\input{capitulo5.tex}
+\restoregeometry
+\mainmatter
+\input{chapters/chapter1.tex}
+\input{chapters/chapter2.tex}
+\input{chapters/chapter3.tex}
+\input{chapters/chapter4.tex}
+\input{chapters/chapter5.tex}
+
+\printbibliography
+\addcontentsline{toc}{chapter}{BIBLIOGRAFÍA}
 
 \end{document}
