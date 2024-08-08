@@ -1,8 +1,10 @@
 \documentclass[12pt, oneside]{book}
 
 \usepackage[utf8]{inputenc}
-\usepackage[spanish, es-tabla]{babel}
+\usepackage[spanish, es-lcroman, es-tabla]{babel}
+\usepackage{csquotes}
 \usepackage{graphicx}
+\usepackage{subcaption}
 \usepackage{tabularx}
 \usepackage{longtable}
 \usepackage{adjustbox}
@@ -14,26 +16,46 @@
 \usepackage[absolute,overlay]{textpos}
 \usepackage[backend=biber, style=apa, sortcites]{biblatex}
 \usepackage{array}
+\usepackage{enumitem}
 \usepackage{tocloft}
-
 \usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+
 \titleformat{\chapter}[display]{\fontsize{14pt}{0pt}\selectfont\bfseries}{\chaptername\ \thechapter}{1em}{}
+\renewcommand{\thechapter}{\Roman{chapter}}
 \titleformat{\section}{\fontsize{12pt}{0pt}\selectfont\bfseries}{\thesection}{1em}{}
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
 \titleformat{\subsection}{\fontsize{12pt}{0pt}\selectfont\bfseries}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}{\fontsize{12pt}{0pt}\selectfont\bfseries}{\thesubsubsection}{1em}{}
 \titleformat{\paragraph}{\fontsize{12pt}{0pt}\selectfont\bfseries}{\theparagraph}{1em}{}
 \titleformat{\subparagraph}{\bfseries\fontsize{12pt}{14pt}\selectfont}{\hspace{-1.5em}\thesubparagraph}{1em}{}[]
+\renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}  
+\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
 
-% \titlespacing{\section}{0pt}{1em}{1em}
-% \titlespacing{\subsection}{0pt}{2em}{2em}
+\pagestyle{fancy}
+\fancyhead{}
+\renewcommand{\headrulewidth}{0.0mm}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+\fancypagestyle{chapterstyle}{
+  \fancyhead{}
+  \renewcommand{\headrulewidth}{0.0mm}
+  \lfoot{}
+  \cfoot{}
+  \rfoot{}
+}
 
-\usepackage{fancyhdr}
-% \fancyhf{}
-% \pagestyle{fancy}
-% \rfoot{\thepage}
 
+\makeatletter
+\renewcommand{\chapter}{
+  \clearpage
+  \thispagestyle{chapterstyle}
+  \global\@topnum\z@ \@afterindentfalse
+  \secdef\@chapter\@schapter}
+\makeatother
 
-\usepackage{setspace}
 \setstretch{2.0}
 
 \setlength{\parindent}{1.5em}
@@ -48,22 +70,25 @@
 \cftsetindents{paragraph}{0em}{4em}
 \cftsetindents{subparagraph}{0em}{5em}
 
-% \renewcommand\cfttoctitlefont{\hfill\Large\bfseries}
-% \renewcommand\cftaftertoctitle{\hfill\mbox{}}
-
 \title{INTÉRPRETE DE PSEUDOCÓDIGO EN ESPAÑOL DESTINADO A LA PROGRAMACIÓN ESTRUCTURADA}
 \author{Henry Quispe Huayta}
 \date{2024}
 
 \addbibresource{back/references.bib}
+
 \begin{document}
 
 \frontmatter
-\newgeometry{left=3cm, top=2.54cm, bottom=2.54cm, right=2.54cm}
+\newgeometry{left=3.2cm, top=2.54cm, bottom=2.54cm, right=2.54cm}
 \input{front/caratula.tex}
 \newpage
-\include{front/calificaciones}
+\thispagestyle{empty}
+\include{front/calificaciones.tex}
 \newpage
+\thispagestyle{empty}
+\include{front/licencia.tex}
+\newpage
+\setcounter{page}{1}
 \input{front/dedicatoria.tex}
 \newpage
 \input{front/agradecimientos.tex}
@@ -86,7 +111,6 @@
 \input{chapters/chapter4.tex}
 \input{chapters/chapter5.tex}
 
-\printbibliography
-\addcontentsline{toc}{chapter}{BIBLIOGRAFÍA}
+\printbibliography[heading=bibintoc, title={BIBLIOGRAFÍA}]
 
 \end{document}
