@@ -21,6 +21,7 @@
 \usepackage{titlesec}
 \usepackage{setspace}
 \usepackage{fancyhdr}
+\usepackage{appendix}
 
 \titleformat{\chapter}[display]{\fontsize{14pt}{0pt}\selectfont\bfseries}{\chaptername\ \thechapter}{1em}{}
 \renewcommand{\thechapter}{\Roman{chapter}}
@@ -63,6 +64,8 @@
 
 \setcounter{secnumdepth}{5}
 \setcounter{tocdepth}{5}
+
+\renewcommand{\cftchapdotsep}{\cftdotsep}
 
 \cftsetindents{section}{0em}{2em}
 \cftsetindents{subsection}{0em}{2.5em}
@@ -112,5 +115,7 @@
 \input{chapters/chapter5.tex}
 
 \printbibliography[heading=bibintoc, title={BIBLIOGRAFÍA}]
+
+\input{back/anexos.tex}
 
 \end{document}
