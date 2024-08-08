@@ -118,7 +118,7 @@ La programación estructurada, con su enfoque en la claridad, la modularidad y l
 
 \section{Compiladores e intérpretes}
 \subsection{Definición y funciones de un compilador}
-Un compilador, en el contexto de la informática, es una herramienta esencial que despliega un conjunto de funciones clave para traducir programas escritos en lenguajes de alto nivel a un formato ejecutable por una computadora. Sus funciones principales se pueden desglosar en varias etapas:
+Un compilador, en el contexto de la informática, es una herramienta esencial que despliega un conjunto de funciones clave para traducir programas escritos en lenguajes de alto nivel a un formato ejecutable por una computadora. Sus funciones principales son:
 
 \begin{itemize}
   \item \textbf{Análisis léxico} \\
@@ -138,7 +138,7 @@ Un compilador, en el contexto de la informática, es una herramienta esencial qu
 En conjunto, estas funciones convierten al compilador en una pieza esencial del desarrollo de software, permitiendo que los programas escritos en lenguajes de alto nivel se ejecuten eficientemente en los sistemas informáticos.
 
 \subsection{Definición y funciones de un intérprete}
-A diferencia de un compilador, un intérprete es una herramienta de ejecución de programas que opera directamente sobre el código fuente, sin necesidad de generar un archivo ejecutable independiente. Sus funciones clave se centran en la interpretación dinámica y la ejecución del código en tiempo real. Aquí se describen las principales funciones de un intérprete:
+A diferencia de un compilador, un intérprete es una herramienta de ejecución de programas que opera directamente sobre el código fuente, sin necesidad de generar un archivo ejecutable independiente. Sus funciones clave se centran en la interpretación dinámica y la ejecución del código en tiempo real. Aquí se describen las principales funciones:
 
 \begin{itemize}
   \item \textbf{Análisis léxico y sintáctico en tiempo real} \\
@@ -154,7 +154,7 @@ A diferencia de un compilador, un intérprete es una herramienta de ejecución d
 En resumen, un intérprete es una herramienta dinámica que analiza y ejecuta el código fuente en tiempo real, ofreciendo adaptabilidad y facilitando el desarrollo ágil. Aunque puede tener un rendimiento ligeramente inferior en comparación con un código compilado, su capacidad para reflejar cambios de manera inmediata lo hace valioso en contextos de desarrollo rápido y pruebas iterativas.
 
 \subsection{Diferencias clave: compilador vs. intérprete}
-Las diferencias entre un compilador y un intérprete residen principalmente en su enfoque hacia la generación de código, la eficiencia resultante y la portabilidad de los programas. Estas diferencias sustanciales proporcionan perspectivas esenciales sobre cómo cada uno maneja la ejecución de programas y las consecuencias que estas elecciones conllevan en el ámbito del desarrollo de software.
+Las diferencias entre un compilador y un intérprete residen principalmente en su enfoque hacia la generación de código, la eficiencia resultante y la portabilidad de los programas. Estas diferencias sustanciales proporcionan perspectivas esenciales sobre cómo cada uno maneja la ejecución de programas y las consecuencias que estas elecciones conllevan en el ámbito del desarrollo de software. Se destacan las siguientes diferencias clave entre un compilador y un intérprete:
 
 \begin{itemize}
   \item \textbf{Generación de código} \\
@@ -406,21 +406,26 @@ Consideremos un pequeño subconjunto de un lenguaje de programación que incluye
 
 Utilizando la gramática anterior, podemos derivar la sentencia $x = 3 + 5 * (2 + 1)$.
 \begin{equation*}
-  \begin{split}
-    <pr&ograma> \\
-    <se&ntencia> \\
-    id & = <expresi\acute{o}n> \\
-    id & = <t\acute{e}rmino> + <t\acute{e}rmino> \\
-    id & = <factor> + <t\acute{e}rmino> \\
-    id & = num + <t\acute{e}rmino> \\
-    id & = 3 + <t\acute{e}rmino> \\
-    id & = 3 + <factor> * <t\acute{e}rmino> \\
-    id & = 3 + num * <t\acute{e}rmino> \\
-    id & = 3 + 5 * ( <expresi\acute{o}n> ) \\
-    id & = 3 + 5 * ( <factor> + <factor> ) \\
-    id & = 3 + 5 * ( num + num) \\
-    id & = 3 + 5 * ( 2 + 1 )
-  \end{split}
+  \begin{array}{ll}
+    \begin{aligned}
+      <pr&ograma> \\
+      <se&ntencia> \\
+      id & = <expresi\acute{o}n> \\
+      id & = <t\acute{e}rmino> + <t\acute{e}rmino> \\
+      id & = <factor> + <t\acute{e}rmino> \\
+      id & = num + <t\acute{e}rmino> \\
+      id & = 3 + <t\acute{e}rmino> \\
+    \end{aligned}
+    &
+    \begin{aligned}
+      id & = 3 + <factor> * <t\acute{e}rmino> \\
+      id & = 3 + num * <t\acute{e}rmino> \\
+      id & = 3 + 5 * ( <expresi\acute{o}n> ) \\
+      id & = 3 + 5 * ( <factor> + <factor> ) \\
+      id & = 3 + 5 * ( num + num ) \\
+      id & = 3 + 5 * ( 2 + 1 )
+    \end{aligned}
+  \end{array}
 \end{equation*}
 
 El Árbol de Sintaxis Abstracta (AST) es fundamental en el análisis y procesamiento de programas, proporcionando una representación clara y eficiente del código fuente. Facilita el análisis semántico al permitir verificaciones detalladas de la lógica y las reglas del lenguaje, y contribuye a la optimización al ofrecer una estructura sobre la cual se pueden aplicar transformaciones para mejorar la eficiencia. Además, el AST guía la generación de código al traducir la representación abstracta en instrucciones ejecutables, asegurando que el software sea tanto funcional como optimizado.
@@ -591,7 +596,7 @@ Una de las ventajas clave de las extensiones de VSCode es su capacidad para exte
 En resumen, las extensiones de Visual Studio Code amplían las funcionalidades del editor y permiten a los usuarios adaptarlo a sus necesidades específicas. Desde mejorar el soporte para diferentes lenguajes hasta agregar nuevas características y herramientas, las extensiones juegan un papel fundamental en la versatilidad y la popularidad de VSCode entre los desarrolladores.
 
 \section{Norma ISO 25010}
-La norma ISO 25010, define un conjunto de requisitos y criterios de evaluación que permiten medir la calidad de un producto de software. \parencite{Ormeño2019}
+La norma ISO 25010 define un conjunto de requisitos y criterios de evaluación que permiten medir la calidad de un producto de software. Este estándar proporciona un marco sistemático para evaluar diversos aspectos del software, asegurando que cumpla con las expectativas y necesidades de los usuarios. \parencite{Ormeño2019}
 
 Estos requisitos se dividen en ocho atributos de calidad principales, que son:
 \begin{itemize}

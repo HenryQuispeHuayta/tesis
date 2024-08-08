@@ -126,7 +126,7 @@ Los Lexemas son el conjunto de palabras reservadas, signos, operadores y separad
     \hline
     \caption{Tokens. Tipos básicos}
   \end{longtable}
-  \vspace*{-4.5em}
+  \vspace*{-2.5em}
   \centering Fuente: Elaboración propia
 \end{center}
 
@@ -379,7 +379,7 @@ A continuación, en la Tabla \ref{tab:automatas}, se presentan los autómatas in
     \caption{Autómatas individuales}
     \label{tab:automatas}
   \end{longtable}
-  \vspace*{-4.5em}
+  \vspace*{-2.5em}
   \centering Fuente: Elaboración propia
 \end{center}
 
@@ -396,7 +396,7 @@ Para las distintas Palabras claves (Keywords) que tiene el intérprete sus gram�
       <instruccion> & ::= Keywords.IF <expresion> Keywords.THEN \\ 
         & \quad <lista\_instrucciones> Keywords.END
     \end{array}
-  \end{math} \\\\
+  \end{math} \\
   Define una estructura condicional que comienza con si, seguida de una condición $(<expresion>)$, un bloque de instrucciones $(<lista\_instrucciones>)$ y termina con fin. Se usa para ejecutar un bloque de código si se cumple una condición.
   \item \textbf{ELSEIF y ELSE} \\
   \begin{math}
@@ -405,7 +405,7 @@ Para las distintas Palabras claves (Keywords) que tiene el intérprete sus gram�
         & \quad <lista\_instrucciones> <inst\_parar> \\
       <caso> & ::= Keywords.ELSE : <lista\_instrucciones> <inst\_parar>
     \end{array}
-  \end{math} \\\\
+  \end{math} \\
   ELSEIF se utiliza para añadir una condición alternativa a una estructura IF, mientras que ELSE se usa para ejecutar un bloque de código si ninguna de las condiciones anteriores se cumple.
   \item \textbf{FOR-TO-STEP} \\
   \begin{math}
@@ -415,7 +415,7 @@ Para las distintas Palabras claves (Keywords) que tiene el intérprete sus gram�
         & \quad Keywords.THEN <lista\_instrucciones> \\
         & \quad Keywords.END
     \end{array}
-  \end{math} \\\\
+  \end{math} \\
   Define un bucle for que inicializa una variable $(<inst\_asignacion>)$, especifica una condición de terminación $(TO <expresion>)$, y opcionalmente un paso $(STEP <expresion>)$, ejecutando un bloque de código repetidamente hasta que se cumpla la condición de terminación.
   \item \textbf{WHILE-END} \\
   \begin{math}
@@ -424,7 +424,7 @@ Para las distintas Palabras claves (Keywords) que tiene el intérprete sus gram�
         & \quad Keywords.THEN <lista\_instrucciones> \\
         & \quad Keywords.END
     \end{array}
-  \end{math} \\\\
+  \end{math} \\
   Define un bucle while que ejecuta un bloque de código mientras se cumpla una condición $(<expresion>)$, terminando cuando la condición ya no se cumple.
   \item \textbf{FUNCTION-END} \\
   \begin{math}
@@ -433,7 +433,7 @@ Para las distintas Palabras claves (Keywords) que tiene el intérprete sus gram�
         & \quad Keywords.THEN <lista\_instrucciones> \\
         & \quad Keywords.END
     \end{array}
-  \end{math} \\\\
+  \end{math} \\
   Define la estructura que comienza con función, seguida de un $(<identificador>)$, un bloque de instrucciones $(<lista\_instrucciones>)$ y termina con fin. Se utiliza para definir una función personalizada que puede ser llamada en otras partes del código.
   \item \textbf{VAR} \\
   \begin{math}
@@ -441,14 +441,14 @@ Para las distintas Palabras claves (Keywords) que tiene el intérprete sus gram�
       <inst\_variable> & ::= Keywords.VAR <identificador> \\
       & \quad Keywords.EQ <expresion>
     \end{array}
-  \end{math} \\\\
+  \end{math} \\
   Define una instrucción de asignación que comienza con var, seguida de un $(<identificador>)$, un signo de igualdad $(Keywords.EQ)$ y una $(<expresion>)$ que se asigna a la variable.
   \item \textbf{RETURN} \\
   \begin{math}
     \begin{array}{rl}
       <inst\_retorno> & ::= Keywords.RETURN <expresion>
     \end{array}
-  \end{math} \\\\
+  \end{math} \\
   Define una instrucción de retorno que comienza con return, seguida de una $(<expresion>)$ que se devuelve como resultado de la función o para salir de un bucle.
   \item \textbf{CONTINUE y BREAK} \\
   \begin{math}
@@ -456,14 +456,14 @@ Para las distintas Palabras claves (Keywords) que tiene el intérprete sus gram�
       <inst\_continuar> & ::= Keywords.CONTINUE \\
       <inst\_parar> & ::= Keywords.BREAK
     \end{array}
-  \end{math} \\\\
+  \end{math} \\
   CONTINUE se utiliza para saltar a la siguiente iteración de un bucle, mientras que BREAK se usa para salir de un bucle antes de que se complete.
   \item \textbf{PRINT} \\
   \begin{math}
     \begin{array}{rl}
       <inst\_imprimir> & ::= Keywords.PRINT (<expresion>)
     \end{array}
-  \end{math} \\\\
+  \end{math} \\
   Define una instrucción de impresión que comienza con imprimir, seguida de una $(<expresion>)$ que se muestra en la consola.
 \end{itemize}
 
