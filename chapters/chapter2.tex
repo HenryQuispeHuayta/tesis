@@ -235,7 +235,7 @@ En el proceso de evaluar la representación interna, existen dos métodos fundam
 El diseño de lenguajes de programación implica varios componentes fundamentales que aseguran su funcionalidad y eficiencia. Estos componentes incluyen el análisis léxico, que convierte el código fuente en una secuencia de tokens; el análisis sintáctico, que organiza estos tokens en una estructura jerárquica coherente; y el análisis semántico, que verifica la validez lógica de las estructuras sintácticas. Además, el diseño considera la implementación de un intérprete o compilador para ejecutar el código, la definición de la semántica y sintaxis del lenguaje, y la gestión de memoria y optimización del rendimiento. Estos elementos colaboran para crear un lenguaje de programación eficiente y funcional.
 
 \subsubsection{Tokens y su manejo}
-Los tokens son las unidades léxicas más pequeñas de un lenguaje de programación, y su manejo es una parte crucial del análisis léxico. Un token puede representar una palabra clave, un identificador, un literal (como un número o una cadena), un operador o un delimitador. El proceso de tokenización convierte una cadena de caracteres del código fuente en una secuencia de tokens que pueden ser procesados por el analizador sintáctico. Este proceso es fundamental para la correcta interpretación y compilación del código, ya que permite descomponer el texto en componentes manejables y significativos.. \parencite{Jeffery2021}
+Los tokens son las unidades léxicas más pequeñas de un lenguaje de programación, y su manejo es una parte crucial del análisis léxico. Un token puede representar una palabra clave, un identificador, un literal (como un número o una cadena), un operador o un delimitador. El proceso de tokenización convierte una cadena de caracteres del código fuente en una secuencia de tokens que pueden ser procesados por el analizador sintáctico. Este proceso es fundamental para la correcta interpretación y compilación del código, ya que permite descomponer el texto en componentes manejables y significativos. \parencite{Jeffery2021}
 
 El manejo de tokens implica definir claramente los diferentes tipos de tokens que el lenguaje soporta y cómo se deben identificar. En el diseño de lenguajes de programación, los tokens se categorizan típicamente en varias clases, como se muestra en la tabla siguiente:
 
@@ -264,7 +264,7 @@ El manejo de tokens implica definir claramente los diferentes tipos de tokens qu
 
 La importancia del manejo adecuado de tokens no puede subestimarse, ya que afecta directamente a la precisión del análisis sintáctico y la ejecución del código. Un sistema de tokenización bien diseñado puede detectar errores léxicos tempranos y proporcionar mensajes de error significativos, mejorando así la experiencia del desarrollador y la confiabilidad del software.
 
-Un sistema de tokenización bien diseñado no solo organiza el código en componentes manejables, sino que también juega un papel crucial en la detección temprana de errores léxicos. Al identificar errores en esta etapa inicial del proceso de compilación, se evita que errores menores escalen a problemas más complejos en fases posteriores, lo que facilita su corrección y mejora la calidad del software.. \parencite{Jeffery2021}
+Un sistema de tokenización bien diseñado no solo organiza el código en componentes manejables, sino que también juega un papel crucial en la detección temprana de errores léxicos. Al identificar errores en esta etapa inicial del proceso de compilación, se evita que errores menores escalen a problemas más complejos en fases posteriores, lo que facilita su corrección y mejora la calidad del software. \parencite{Jeffery2021}
 
 A continuación, se presenta un diagrama de flujo básico que ilustra el proceso de tokenización:
 \begin{figure}[!h]
@@ -428,7 +428,7 @@ Utilizando la gramática anterior, podemos derivar la sentencia $x = 3 + 5 * (2 
   \end{array}
 \end{equation*}
 
-El Árbol de Sintaxis Abstracta (AST) es fundamental en el análisis y procesamiento de programas, proporcionando una representación clara y eficiente del código fuente. Facilita el análisis semántico al permitir verificaciones detalladas de la lógica y las reglas del lenguaje, y contribuye a la optimización al ofrecer una estructura sobre la cual se pueden aplicar transformaciones para mejorar la eficiencia. Además, el AST guía la generación de código al traducir la representación abstracta en instrucciones ejecutables, asegurando que el software sea tanto funcional como optimizado.
+El Árbol de Sintaxis Abstracta (AST, por sus siglas en inglés) es fundamental en el análisis y procesamiento de programas, proporcionando una representación clara y eficiente del código fuente. Facilita el análisis semántico al permitir verificaciones detalladas de la lógica y las reglas del lenguaje, y contribuye a la optimización al ofrecer una estructura sobre la cual se pueden aplicar transformaciones para mejorar la eficiencia. Además, el AST guía la generación de código al traducir la representación abstracta en instrucciones ejecutables, asegurando que el software sea tanto funcional como optimizado.
 
 El AST para esta expresión sería:
 
