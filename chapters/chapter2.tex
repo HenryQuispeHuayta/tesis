@@ -165,7 +165,7 @@ Las diferencias entre un compilador y un intérprete residen principalmente en s
   En cuanto a la portabilidad, los intérpretes generalmente presentan una ventaja considerable. Dado que el código fuente puede ejecutarse directamente, los programas interpretados son inherentemente más portátiles entre diferentes plataformas. Contrariamente, los compiladores generan código específico para la plataforma de destino, lo que puede limitar la portabilidad del código compilado entre diversas arquitecturas o sistemas operativos. No obstante, con la presencia de compiladores cruzados y máquinas virtuales, esta limitación se ve mitigada en algunos contextos. \parencite{AlfonsecaMoreno2006}
 \end{itemize}
 
-Estas diferencias fundamentales arrojan luz sobre las consideraciones cruciales que los desarrolladores deben tener en cuenta al elegir entre un compilador y un intérprete según las necesidades y requisitos particulares de un proyecto. Mientras que los compiladores se destacan por ofrecer un rendimiento optimizado, los intérpretes se distinguen por su adaptabilidad y facilidad de uso, especialmente en entornos de desarrollo ágil y pruebas iterativas.
+Estas diferencias fundamentales arrojan luz sobre las consideraciones cruciales que los desarrolladores deben tener en cuenta al elegir entre un compilador y un intérprete según las necesidades y requisitos particulares de un proyecto. Mientras que los compiladores se destacan por ofrecer un rendimiento optimizado y una ejecución rápida gracias a las optimizaciones realizadas durante la fase de compilación, los intérpretes se distinguen por su adaptabilidad y facilidad de uso, especialmente en entornos de desarrollo ágil y pruebas iterativas. Los intérpretes permiten una rápida retroalimentación y depuración en tiempo real, lo cual es beneficioso durante el desarrollo y la prueba de código. No obstante, en situaciones donde el rendimiento es crítico y se requiere un código altamente eficiente, el uso de compiladores puede ser la opción preferida. La elección entre compilador e intérprete, por lo tanto, depende en gran medida del contexto del proyecto y los objetivos específicos en términos de rendimiento, portabilidad y ciclo de desarrollo.
 
 \section{Estructura de un intérprete}
 Cuando se aborda la construcción de un intérprete, suele ser beneficioso adoptar una Representación Interna (RI) del lenguaje fuente a analizar. En este enfoque, la organización interna del intérprete se divide en módulos distintos:
@@ -216,7 +216,7 @@ Durante el proceso de traducción, se crea una tabla que almacena información r
     \end{tabularx}
   \end{center}
   \caption{Tabla de símbolos}
-  \centering Fuente: \parencite{lu1tr0n2016}
+  \centering Fuente: \parencite{FERNANDEZ-OLIVA2016}
   \label{tab:simbolos}
 \end{table}
 
