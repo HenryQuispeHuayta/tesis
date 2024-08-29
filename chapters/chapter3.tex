@@ -10,7 +10,7 @@ A continuación, se muestra el tablero de actividades.
   \centering
   \includegraphics[width=1\textwidth]{images/tablero.png}
   \caption{Tablero de trabajo}
-  \centering Fuente: Elaboración propia (GitHub)
+  \centering Fuente: Elaboración propia
   \label{fig:tablero}
 \end{figure}
 \newline
@@ -26,7 +26,7 @@ Se tiene un total de seis columnas, las cuales son:
   \item \textbf{In Progress} \\
   Las tareas que se encuentran en esta columna ya están siendo trabajadas activamente. Aquí es donde se lleva a cabo la implementación de las funcionalidades o las correcciones de errores planificadas. Se monitorea el progreso de estas tareas para garantizar que avancen de manera eficiente.
   \item \textbf{In Review} \\
-  Esta columna alberga las tareas que están en proceso de revisión. Una vez que una tarea ha sido completada, se somete a un proceso de revisión para garantizar la calidad del trabajo realizado. Si se encuentra algún error durante la revisión, la tarea se devuelve a la columna "In Progress" para su corrección.
+  Esta columna alberga las tareas que están en proceso de revisión. Una vez que una tarea ha sido completada, se somete a un proceso de revisión para garantizar la calidad del trabajo realizado. Si se encuentra algún error durante la revisión, la tarea se devuelve a la columna ``In Progress'' para su corrección.
   \item \textbf{Done} \\
   Una vez que una tarea ha pasado exitosamente por el proceso de revisión, se mueve a esta columna. Esto indica que la tarea ha sido completada satisfactoriamente. Las tareas permanecen en esta columna durante un tiempo antes de pasar a la columna final, en posible espera de algún cambio que requiera volver a una columna anterior.
   \item \textbf{Closed} \\
@@ -55,7 +55,7 @@ Las principales actividades que se realizaron se registraron en el tablero Kanba
   \centering
   \includegraphics[width=0.6\textwidth]{images/actividades.png}
   \caption{Actividades realizadas}
-  \centering Fuente: Elaboración propia (GitHub)
+  \centering Fuente: Elaboración propia
   \label{fig:actividades}
 \end{figure}
 
@@ -501,41 +501,45 @@ Los primeros de una gramática son los símbolos no terminales que pueden aparec
   \centering Fuente: Elaboración propia
   \label{tab:primeros}
 \end{table}
+\newpage
 
 \subsection{Siguientes}
 Los siguientes de una gramática son los símbolos no terminales que pueden aparecer inmediatamente después de un símbolo no terminal en una cadena derivada. Los siguientes determinan qué símbolos pueden seguir a un no terminal en una derivación. Para la gramática del intérprete, los siguientes de cada no terminal son los siguientes:
-\begin{table}[!h]
-  \begin{center}
-    \begin{tabularx}{1\textwidth}{|X|X|}
-      \hline
-      \textbf{No Terminal} & \textbf{Siguientes} \\
-      \hline
-      <instruccion> & Keywords.END, Identificador \\
-      \hline
-      <caso> & Keywords.END, Keywords.ELSEIF, Keywords.ELSE \\
-      \hline
-      <inst\_para> & Keywords.END, Identificador \\
-      \hline
-      <inst\_mientras> & Keywords.END, Identificador \\
-      \hline
-      <inst\_funcion> & Keywords.END, Identificador \\
-      \hline
-      <inst\_variable> & Keywords.END, Identificador \\
-      \hline
-      <inst\_retorno> & Keywords.END, Identificador \\
-      \hline
-      <inst\_continuar> & Keywords.END, Identificador \\
-      \hline
-      <inst\_parar> & Keywords.END, Identificador \\
-      \hline
-      <inst\_imprimir> & Keywords.END, Identificador \\
-      \hline
-    \end{tabularx}
-  \end{center}
-  \caption{Siguientes de la gramática}
+\begin{center}
+  \begin{longtable}{|l|l|}
+    \hline
+    \textbf{No Terminal} & \textbf{Siguientes} \\
+    \hline
+    \endfirsthead
+    \hline
+    \endhead
+    \endfoot
+    \hline
+    <instruccion> & Keywords.END, Identificador \\
+    \hline
+    <caso> & Keywords.END, Keywords.ELSEIF, Keywords.ELSE \\
+    \hline
+    <inst\_para> & Keywords.END, Identificador \\
+    \hline
+    <inst\_mientras> & Keywords.END, Identificador \\
+    \hline
+    <inst\_funcion> & Keywords.END, Identificador \\
+    \hline
+    <inst\_variable> & Keywords.END, Identificador \\
+    \hline
+    <inst\_retorno> & Keywords.END, Identificador \\
+    \hline
+    <inst\_continuar> & Keywords.END, Identificador \\
+    \hline
+    <inst\_parar> & Keywords.END, Identificador \\
+    \hline
+    <inst\_imprimir> & Keywords.END, Identificador \\
+    \hline
+    \caption{Siguientes de la gramática}
+  \end{longtable}
+  \vspace*{-2.5em}
   \centering Fuente: Elaboración propia
-  \label{tab:siguientes}
-\end{table}
+\end{center}
 
 \section{Análisis semántico}
 El análisis semántico es una etapa crucial en el proceso de compilación e interpretación que verifica la corrección semántica del código fuente después de haber pasado por el análisis léxico y sintáctico. La implementación del análisis semántico se realizó siguiendo estos puntos:
@@ -543,7 +547,7 @@ El análisis semántico es una etapa crucial en el proceso de compilación e int
 \subsection{Definición de Contextos y Alcance}
 \begin{itemize}
   \item Se definieron contextos que guardan información sobre el alcance actual, incluyendo variables, funciones y otros identificadores visibles.
-  \item Los contextos permitieron la gestión de scopes, soportando características como variables locales y globales, y la resolución de nombres.
+  \item Los contextos permitieron la gestión de scopes (alcances o ámbitos), soportando características como variables locales y globales, y la resolución de nombres.
 \end{itemize}
 
 \subsection{Verificación de Tipos}

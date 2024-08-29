@@ -1,7 +1,7 @@
 \chapter{MARCO TEÓRICO}
 \section{Programación estructurada}
 \subsection{Historia y evolución}
-La programación estructurada surgió en la década de 1960 como una respuesta a la creciente complejidad de los programas de computadora. Antes de este enfoque, los programadores solían utilizar técnicas de programación desordenadas y llenas de saltos incontrolados, conocidas como programación espagueti. Edsger Dijkstra, un prominente científico de la computación, fue uno de los pioneros en promover la programación estructurada. En su influyente letter "Go To Statement Considered Harmful" (1968), Dijkstra argumentó que el uso excesivo de la instrucción “GOTO” hacía que el código fuera difícil de seguir y de mantener. Este letter sentó las bases para la adopción de estructuras de control más estrictas y organizadas en los lenguajes de programación. \parencite{Dijkstra1968}
+La programación estructurada surgió en la década de 1960 como una respuesta a la creciente complejidad de los programas de computadora. Antes de este enfoque, los programadores solían utilizar técnicas de programación desordenadas y llenas de saltos incontrolados, conocidas como programación espagueti. Edsger Dijkstra, un prominente científico de la computación, fue uno de los pioneros en promover la programación estructurada. En su influyente letter ``Go To Statement Considered Harmful'' (1968), Dijkstra argumentó que el uso excesivo de la instrucción “GOTO” hacía que el código fuera difícil de seguir y de mantener. Este letter sentó las bases para la adopción de estructuras de control más estrictas y organizadas en los lenguajes de programación. \parencite{Dijkstra1968}
 
 Durante los años 70 y 80, la programación estructurada se convirtió en un estándar en la industria del software. Lenguajes como Pascal, desarrollado por Niklaus Wirth \parencite{Barron1981}, y C, creado por Dennis Ritchie \parencite{Kernighan1988}, incorporaron estructuras de control claras como secuencias, selecciones e iteraciones. Estos lenguajes promovieron la escritura de código más legible y mantenible, facilitando la detección y corrección de errores. La estructura modular de estos lenguajes también permitió la creación de programas más grandes y complejos de manera ordenada. En esta época, el uso de diagramas de flujo también se popularizó como una herramienta para visualizar la lógica de los programas, ayudando a los desarrolladores a planificar y documentar sus códigos de manera efectiva.
 
@@ -46,7 +46,7 @@ La programación estructurada implica escribir programas de computadora de maner
   \newline
 
   \item \textbf{Selección} \\
-  La estructura de selección, también conocida como toma de decisiones, permite que un programa ejecute diferentes instrucciones dependiendo de si se cumple una determinada condición lógica. Las estructuras de selección más comunes son las declaraciones ``if`` y ``else'', que permiten al programa elegir entre dos o más caminos basados en condiciones específicas. Por ejemplo, un programa puede decidir qué acción tomar según el valor de una variable o el resultado de una operación. La estructura de selección es fundamental para escribir programas que respondan de manera diferente a diferentes situaciones o entradas.
+  La estructura de selección, también conocida como toma de decisiones, permite que un programa ejecute diferentes instrucciones dependiendo de si se cumple una determinada condición lógica. Las estructuras de selección más comunes son las declaraciones ``if'' y ``else'', que permiten al programa elegir entre dos o más caminos basados en condiciones específicas. Por ejemplo, un programa puede decidir qué acción tomar según el valor de una variable o el resultado de una operación. La estructura de selección es fundamental para escribir programas que respondan de manera diferente a diferentes situaciones o entradas.
   \begin{figure}[!h]
     \centering
     \includegraphics[width=0.4\textwidth]{images/seleccion.png}
@@ -54,11 +54,10 @@ La programación estructurada implica escribir programas de computadora de maner
     \centering Fuente: Elaboración propia
     \label{fig:seleccion}
   \end{figure}
-  \newline
-  \newline
+  \newpage
 
   \item \textbf{Iteración} \\
-  La estructura de iteración, también conocida como bucle, permite que un bloque de código se repita varias veces hasta que se cumpla una determinada condición de salida. Esto permite la ejecución repetida de un conjunto de instrucciones sin tener que escribir el mismo código una y otra vez. Los bucles son esenciales para realizar tareas repetitivas de manera eficiente, como procesar grandes cantidades de datos o realizar operaciones en una lista o matriz. Las estructuras de bucle más comunes son "for", "while" y "do-while", cada una con sus propias características y casos de uso específicos. La estructura de iteración es crucial para la automatización de tareas y la optimización del rendimiento en programas informáticos.
+  La estructura de iteración, también conocida como bucle, permite que un bloque de código se repita varias veces hasta que se cumpla una determinada condición de salida. Esto permite la ejecución repetida de un conjunto de instrucciones sin tener que escribir el mismo código una y otra vez. Los bucles son esenciales para realizar tareas repetitivas de manera eficiente, como procesar grandes cantidades de datos o realizar operaciones en una lista o matriz. Las estructuras de bucle más comunes son ``for'', ``while'' y ``do-while'', cada una con sus propias características y casos de uso específicos. La estructura de iteración es crucial para la automatización de tareas y la optimización del rendimiento en programas informáticos.
   \begin{figure}[!h]
     \centering
     \includegraphics[width=0.3\textwidth]{images/iteracion.png}
@@ -68,6 +67,7 @@ La programación estructurada implica escribir programas de computadora de maner
   \end{figure}
   \newline
 \end{itemize}
+\newpage
 
 \subsection{Ventajas y desventajas de la programación estructurada}
 La programación estructurada es un paradigma de programación que promueve la mejora de la claridad, calidad y desarrollo de programas informáticos. A continuación, se detallan las ventajas y desventajas de este enfoque:
@@ -283,6 +283,7 @@ Las estructuras léxicas son las reglas y patrones que definen cómo se reconoce
 \begin{itemize}
   \item \textbf{Patrón} \\
   Un patrón es una regla que describe la secuencia de caracteres que puede formar un determinado token. Por ejemplo, el patrón para un identificador podría ser una letra seguida de cualquier combinación de letras y dígitos. Los patrones se definen utilizando expresiones regulares o gramáticas formales, y son fundamentales para la correcta identificación de los tokens.. \parencite{Jeffery2021}
+  \newline
   \item \textbf{Lexema} \\
   Un lexema es una cadena de caracteres del código fuente que coincide con un patrón específico. Por ejemplo, en la expresión x = 10;, los lexemas incluyen x, =, 10, y ;. Cada lexema se asocia con un token que describe su tipo y, en algunos casos, su valor.. \parencite{Jeffery2021}
   \item \textbf{Componente léxico} \\
@@ -439,6 +440,7 @@ El AST para esta expresión sería:
   \centering Fuente: Elaboración propia
   \label{fig:ast_ejemplo}
 \end{figure}
+\newpage
 
 Este diagrama ilustra cómo una expresión aritmética se descompone en sus componentes básicos y se organiza en una estructura jerárquica. Cada nodo del árbol representa una operación o un valor, mostrando claramente la relación entre los diferentes elementos de la expresión.
 
@@ -454,7 +456,7 @@ A continuación, se presenta una tabla que resume algunos de los errores semánt
       \hline
       \textbf{Tipo de Error Semántico} & \textbf{Descripción} & \textbf{Ejemplo} & \textbf{Gestión del Error} \\
       \hline
-      Incompatibilidad de Tipos & Operaciones realizadas entre tipos no compatibles & int x = "cadena"; & Reporte de error y terminación del análisis \\
+      Incompatibilidad de Tipos & Operaciones realizadas entre tipos no compatibles & int x = ``cadena''; & Reporte de error y terminación del análisis \\
       \hline
       Uso de Variables no Declaradas & Uso de variables que no han sido previamente declaradas & y = 5; (sin declarar y) & Advertencia o error según la política del lenguaje \\
       \hline
@@ -539,7 +541,7 @@ La metodología Kanban nos ayudará a definir, gestionar y mejorar los servicios
   Se destaca que el límite de trabajo en progreso (WIP) para la fase de desarrollo se ha reducido de nueve a cinco. La reducción del límite de WIP se basa en las necesidades del proyecto y ayuda a evitar la acumulación excesiva de trabajo en una fase particular. Se menciona que aumentar el límite de WIP es una mala práctica. En la fase de revisión de calidad, todas las tareas deben ser finalizadas pasando por este proceso. \parencite{Bermejo2010}
 
   \item \textbf{Limitación del trabajo en progreso} \\
-  La imposición de límites al trabajo en progreso es esencial para mantener un flujo de trabajo constante y prevenir la sobrecarga del equipo de desarrollo. Establecer un límite en la cantidad de tareas permitidas en la columna "en curso" ayuda a evitar la multitarea excesiva y concentra la atención en completar tareas antes de comenzar nuevas. Esta limitación fomenta un enfoque más eficiente y eficaz en la resolución de problemas, ya que el desarrollador se centra en unas pocas tareas a la vez. Además, al limitar el trabajo en progreso, se reduce la probabilidad de que se generen cuellos de botella, lo que contribuye a un flujo de trabajo más suave y predecible. \parencite{Anderson2010}
+  La imposición de límites al trabajo en progreso es esencial para mantener un flujo de trabajo constante y prevenir la sobrecarga del equipo de desarrollo. Establecer un límite en la cantidad de tareas permitidas en la columna ``en curso'' ayuda a evitar la multitarea excesiva y concentra la atención en completar tareas antes de comenzar nuevas. Esta limitación fomenta un enfoque más eficiente y eficaz en la resolución de problemas, ya que el desarrollador se centra en unas pocas tareas a la vez. Además, al limitar el trabajo en progreso, se reduce la probabilidad de que se generen cuellos de botella, lo que contribuye a un flujo de trabajo más suave y predecible. \parencite{Anderson2010}
 
   \item \textbf{Gestión activa} \\
   La gestión activa en Kanban implica la revisión constante del tablero Kanban para identificar áreas de mejora y optimización del proceso de desarrollo. Esta práctica va más allá de la simple visualización y establecimiento de límites; implica una participación continua para evaluar y ajustar el flujo de trabajo. Mediante la gestión activa, se pueden realizar cambios en tiempo real para abordar problemas emergentes y mejorar la eficiencia del equipo de desarrollo. Esta mentalidad de mejora continua es fundamental para la evolución exitosa del proceso de desarrollo a lo largo del tiempo. \parencite{Anderson2010}
