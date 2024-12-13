@@ -2,4 +2,6 @@
 
 INTÉRPRETE DE PSEUDOCÓDIGO EN ESPAÑOL DESTINADO A LA PROGRAMACIÓN ESTRUCTURADA
 
+## Estructura
+
 Tesis en formato latex.
