@@ -4,4 +4,4 @@ INTÉRPRETE DE PSEUDOCÓDIGO EN ESPAÑOL DESTINADO A LA PROGRAMACIÓN ESTRUCTURA
 
 ## Estructura
 
-Tesis en formato latex.
+Tesis escrita en formato latex.
